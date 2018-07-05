@@ -1,0 +1,1405 @@
+<?xml version="1.0"?>
+<s:schema elementFormDefault="qualified" targetNamespace="http://nintex.com" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://nintex.com" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+	<s:import namespace="http://microsoft.com/wsdl/types/" schemaLocation="ProcessTaskResponse4.xsd"></s:import>
+	<s:element name="WorkflowFormProductSelected">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowConfiguration" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="activityConfiguration" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="product" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="formType" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="WorkflowFormProductSelectedResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="WorkflowFormProductSelectedResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="CheckInForms">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowConfiguration" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="activityConfiguration" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="formType" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="CheckInFormsResponse">
+		<s:complexType></s:complexType>
+	</s:element>
+	<s:element name="SaveWorkflow">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="wfName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="activityConfigs" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="listId" type="s1:guid"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="contentTypeId" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="changeNotes" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="SaveWorkflowResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="SaveWorkflowResult" type="tns:WorkflowMetaData"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:complexType name="WorkflowMetaData">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="ModifiedBy" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="PublishedBy" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="WorkflowDescription" type="s:string"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="EcbId" type="s1:guid"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="Published" type="s:dateTime"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="LocalTimePublishedString" type="s:string"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="TimeLastModified" type="s:dateTime"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="LocalTimeLastModifiedString" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="ChangeInformation" type="s:string"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="WorkflowId" type="s1:guid"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="WorkflowTypeDisplayName" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="UIVersion" type="s:string"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="IsPublished" type="s:boolean"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="PreviouslyPublished" type="s:boolean"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="ListId" type="s1:guid"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="MajorVersion" type="s:int"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="MinorVersion" type="s:int"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:element name="WorkflowExists">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowName" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="listId" type="s1:guid"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowType" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="WorkflowExistsResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="WorkflowExistsResult" type="tns:NameInUseStatus"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:simpleType name="NameInUseStatus">
+		<s:restriction base="s:string">
+			<s:enumeration value="NameNotUsed"></s:enumeration>
+			<s:enumeration value="NameUsedInOtherList"></s:enumeration>
+			<s:enumeration value="NameUsedInThisList"></s:enumeration>
+		</s:restriction>
+	</s:simpleType>
+	<s:element name="SnippetExists">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="snippetName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="SnippetExistsResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="SnippetExistsResult" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="TemplateExists">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="templateName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="TemplateExistsResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="TemplateExistsResult" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="SaveSnippet">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="snippetName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="activityConfigs" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="SaveSnippetResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="SaveSnippetResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="SaveTemplate">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="templateName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="templateDescription" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="category" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="activityConfigs" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="SaveTemplateResponse">
+		<s:complexType></s:complexType>
+	</s:element>
+	<s:element name="SaveTemplate2">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="templateName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="templateDescription" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="category" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="activityConfigs" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="lcid" type="s:int"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="SaveTemplate2Response">
+		<s:complexType></s:complexType>
+	</s:element>
+	<s:element name="PublishWorkflow">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="wfName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="activityConfigs" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="listId" type="s1:guid"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="contentTypeId" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="changeNotes" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="PublishWorkflowResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="PublishWorkflowResult" type="tns:WorkflowMetaData"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="TerminateWorkflow">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="listId" type="s1:guid"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="itemId" type="s:int"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="instanceId" type="s1:guid"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="TerminateWorkflowResponse">
+		<s:complexType></s:complexType>
+	</s:element>
+	<s:element name="TerminateWorkflowByName">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="fileUrl" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowName" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="terminatePreviousInstances" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="TerminateWorkflowByNameResponse">
+		<s:complexType></s:complexType>
+	</s:element>
+	<s:element name="TerminateWorkflowByNameForListItem">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="itemId" type="s:int"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowName" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="terminatePreviousInstances" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="TerminateWorkflowByNameForListItemResponse">
+		<s:complexType></s:complexType>
+	</s:element>
+	<s:element name="CheckGlobalReuseStatus">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="CheckGlobalReuseStatusResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="CheckGlobalReuseStatusResult" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="DeleteWorkflow">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="listId" type="s1:guid"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="workflowId" type="s1:guid"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowType" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="DeleteWorkflowResponse">
+		<s:complexType></s:complexType>
+	</s:element>
+	<s:element name="DeleteSnippet">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="snippetId" type="s1:guid"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="DeleteSnippetResponse">
+		<s:complexType></s:complexType>
+	</s:element>
+	<s:element name="HideTaskForApprover">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="approverId" type="s:long"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="contentDbId" type="s:int"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="HideTaskForApproverResponse">
+		<s:complexType></s:complexType>
+	</s:element>
+	<s:element name="HideWorkflow">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="siteId" type="s1:guid"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="instanceId" type="s1:guid"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="HideWorkflowResponse">
+		<s:complexType></s:complexType>
+	</s:element>
+	<s:element name="StartWorkflow">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="fileUrl" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="associationData" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="StartWorkflowResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="StartWorkflowResult" type="s1:guid"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="StartWorkflowOnListItem">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="itemId" type="s:int"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="associationData" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="StartWorkflowOnListItemResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="StartWorkflowOnListItemResult" type="s1:guid"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="StartSiteWorkflow">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="associationData" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="StartSiteWorkflowResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="StartSiteWorkflowResult" type="s1:guid"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetItemsPendingMyApproval">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="uniquenessInfo" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetItemsPendingMyApprovalResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetItemsPendingMyApprovalResult" type="tns:ItemsPendingApproval"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:complexType name="ItemsPendingApproval">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="1" name="Items" type="tns:ArrayOfPendingMyApprovalLight"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="HasNewData" type="s:boolean"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="UniquenessInfo" type="s:string"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:complexType name="ArrayOfPendingMyApprovalLight">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="unbounded" name="PendingMyApprovalLight" nillable="true" type="tns:PendingMyApprovalLight"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:complexType name="PendingMyApprovalLight">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="1" name="CurrentActivityTitle" type="s:string"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="IdleTimeMinutes" type="s:int"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="ExpectedDuration" type="s:int"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="ItemTitle" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="ItemFilename" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="WorkflowName" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="ItemUrl" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="ProgressUrl" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="ApprovalUrl" type="s:string"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="EntryTime" type="s:dateTime"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:element name="GetRunningWorkflowTasksForCurrentUser">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="fileUrl" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetRunningWorkflowTasksForCurrentUserResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetRunningWorkflowTasksForCurrentUserResult" type="tns:ArrayOfUserTask"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:complexType name="ArrayOfUserTask">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="unbounded" name="UserTask" nillable="true" type="tns:UserTask"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:complexType name="UserTask">
+		<s:sequence>
+			<s:element minOccurs="1" maxOccurs="1" name="SharePointTaskId" type="s:int"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="HumanWorkflowID" type="s:long"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="AssignedTo" type="tns:User"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="EntryTime" type="s:dateTime"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="WorkflowName" type="s:string"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="WorkflowInstaceId" type="s1:guid"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="TaskName" type="s:string"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="TaskType" type="tns:TaskType"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:complexType name="User">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="1" name="SipAddress" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="OtherEmailAddress" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="IsDomainGroup" type="s:boolean"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="IsSPGroup" type="s:boolean"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="IsUser" type="s:boolean"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:simpleType name="TaskType">
+		<s:restriction base="s:string">
+			<s:enumeration value="Approval"></s:enumeration>
+			<s:enumeration value="Review"></s:enumeration>
+			<s:enumeration value="CollectData"></s:enumeration>
+			<s:enumeration value="Todo"></s:enumeration>
+			<s:enumeration value="MultiOutcome"></s:enumeration>
+		</s:restriction>
+	</s:simpleType>
+	<s:element name="GetRunningWorkflowTasksForCurrentUserForListItem">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="itemId" type="s:int"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetRunningWorkflowTasksForCurrentUserForListItemResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetRunningWorkflowTasksForCurrentUserForListItemResult" type="tns:ArrayOfUserTask"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetRunningWorkflowTasks">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="fileUrl" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetRunningWorkflowTasksResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetRunningWorkflowTasksResult" type="tns:ArrayOfUserTask"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetRunningWorkflowTasksForListItem">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="itemId" type="s:int"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetRunningWorkflowTasksForListItemResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetRunningWorkflowTasksForListItemResult" type="tns:ArrayOfUserTask"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetRunningWorkflowTasksCollection">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="userlogin" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="teamsiteUrl" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetRunningWorkflowTasksCollectionResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetRunningWorkflowTasksCollectionResult" type="tns:ArrayOfUserTask"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="ProcessTaskResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="comments" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="outcome" type="tns:Outcome"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="spTaskId" type="s:int"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:simpleType name="Outcome">
+		<s:restriction base="s:string">
+			<s:enumeration value="Approved"></s:enumeration>
+			<s:enumeration value="Rejected"></s:enumeration>
+			<s:enumeration value="Pending"></s:enumeration>
+			<s:enumeration value="Cancelled"></s:enumeration>
+			<s:enumeration value="NotRequired"></s:enumeration>
+			<s:enumeration value="Continue"></s:enumeration>
+			<s:enumeration value="Delegated"></s:enumeration>
+			<s:enumeration value="Custom"></s:enumeration>
+			<s:enumeration value="OverrideApproved"></s:enumeration>
+			<s:enumeration value="OverrideRejected"></s:enumeration>
+			<s:enumeration value="OverrideContinue"></s:enumeration>
+		</s:restriction>
+	</s:simpleType>
+	<s:element name="ProcessTaskResponseResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="ProcessTaskResponseResult" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="ProcessTaskResponse2">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="comments" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="outcome" type="tns:Outcome"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="spTaskId" type="s:int"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="taskListName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="ProcessTaskResponse2Response">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="ProcessTaskResponse2Result" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="ProcessTaskResponse3">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="comments" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="outcome" type="tns:Outcome"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="spTaskId" type="s:int"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="taskListName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="ProcessTaskResponse3Response">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="ProcessTaskResponse3Result" type="tns:ProcessTaskResponseResult"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:simpleType name="ProcessTaskResponseResult">
+		<s:restriction base="s:string">
+			<s:enumeration value="Success"></s:enumeration>
+			<s:enumeration value="CannotObtainLock"></s:enumeration>
+			<s:enumeration value="InvalidUser"></s:enumeration>
+		</s:restriction>
+	</s:simpleType>
+	<s:element name="ProcessFlexiTaskResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="comments" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="outcome" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="spTaskId" type="s:int"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="taskListName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="ProcessFlexiTaskResponseResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="ProcessFlexiTaskResponseResult" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="ProcessFlexiTaskResponse2">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="comments" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="outcome" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="spTaskId" type="s:int"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="taskListName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="ProcessFlexiTaskResponse2Response">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="ProcessFlexiTaskResponse2Result" type="tns:ProcessTaskResponseResult"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetOutcomesForFlexiTask">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="spTaskId" type="s:int"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="taskListName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetOutcomesForFlexiTaskResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetOutcomesForFlexiTaskResult" type="tns:ArrayOfConfiguredOutcome"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:complexType name="ArrayOfConfiguredOutcome">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="unbounded" name="ConfiguredOutcome" nillable="true" type="tns:ConfiguredOutcome"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:complexType name="ConfiguredOutcome">
+		<s:attribute name="Id" type="s:int" use="required"></s:attribute>
+		<s:attribute name="Name" type="s:string"></s:attribute>
+		<s:attribute name="CommentsMode" type="tns:CommentsMode" use="required"></s:attribute>
+		<s:attribute name="Description" type="s:string"></s:attribute>
+		<s:attribute name="BranchIndex" type="s:int" use="required"></s:attribute>
+	</s:complexType>
+	<s:simpleType name="CommentsMode">
+		<s:restriction base="s:string">
+			<s:enumeration value="None"></s:enumeration>
+			<s:enumeration value="Optional"></s:enumeration>
+			<s:enumeration value="Required"></s:enumeration>
+		</s:restriction>
+	</s:simpleType>
+	<s:element name="DelegateTask">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="spTaskId" type="s:int"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="taskListName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="targetUsername" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="comments" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="sendNotification" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="DelegateTaskResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="DelegateTaskResult" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetWorkflowHistory">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="fileUrl" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="stateFilter" type="tns:SPWorkflowState"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowNameFilter" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:simpleType name="SPWorkflowState">
+		<s:list>
+			<s:simpleType>
+				<s:restriction base="s:string">
+					<s:enumeration value="None"></s:enumeration>
+					<s:enumeration value="Locked"></s:enumeration>
+					<s:enumeration value="Running"></s:enumeration>
+					<s:enumeration value="Completed"></s:enumeration>
+					<s:enumeration value="Cancelled"></s:enumeration>
+					<s:enumeration value="Expiring"></s:enumeration>
+					<s:enumeration value="Expired"></s:enumeration>
+					<s:enumeration value="Faulting"></s:enumeration>
+					<s:enumeration value="Terminated"></s:enumeration>
+					<s:enumeration value="Suspended"></s:enumeration>
+					<s:enumeration value="Orphaned"></s:enumeration>
+					<s:enumeration value="HasNewEvents"></s:enumeration>
+					<s:enumeration value="NotStarted"></s:enumeration>
+					<s:enumeration value="All"></s:enumeration>
+				</s:restriction>
+			</s:simpleType>
+		</s:list>
+	</s:simpleType>
+	<s:element name="GetWorkflowHistoryResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetWorkflowHistoryResult" type="tns:ArrayOfWorkflowLog"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:complexType name="ArrayOfWorkflowLog">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="unbounded" name="WorkflowLog" nillable="true" type="tns:WorkflowLog"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:complexType name="WorkflowLog">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="1" name="WorkflowName" type="s:string"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="InternalState" type="tns:SPWorkflowState"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="StartTimeShort" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="StartTimeLong" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="StartDateShort" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="StartDateLong" type="s:string"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="LastModifiedDate" type="s:dateTime"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="LastModifiedTimeShort" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="LastModifiedTimeLong" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="LastModifiedDateShort" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="LastModifiedDateLong" type="s:string"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="WorkflowInstanceId" type="s1:guid"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="Activities" type="tns:ArrayOfActivityLogInfo"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="HumanTasks" type="tns:ArrayOfHumanTaskLogInfo"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="WorkflowHistory">
+				<s:complexType>
+					<s:sequence>
+						<s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax"></s:any>
+						<s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax"></s:any>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:complexType name="ArrayOfActivityLogInfo">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="unbounded" name="ActivityLogInfo" nillable="true" type="tns:ActivityLogInfo"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:complexType name="ActivityLogInfo">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="1" name="BeforeProperties" type="tns:VerboseLog"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="AfterProperties" type="tns:VerboseLog"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="StartTime" type="s:dateTime"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="StartTimeShort" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="StartTimeLong" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="StartDateShort" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="StartDateLong" type="s:string"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="EndTime" type="s:dateTime"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="EndTimeShort" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="EndTimeLong" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="EndDateLong" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="ActivityTitle" type="s:string"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="SequenceId" type="s:int"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="ProgressId" type="s:long"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:complexType name="VerboseLog">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="1" name="MachineName" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="ProcessName" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="NWVersion" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="SPVersion" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="ContextData" type="tns:ArrayOfNWContextData"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:complexType name="ArrayOfNWContextData">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="unbounded" name="NWContextData" nillable="true" type="tns:NWContextData"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:complexType name="NWContextData">
+		<s:complexContent mixed="false">
+			<s:extension base="tns:NWContextKey">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="1" name="Options" type="tns:ContextDataOptions"></s:element>
+					<s:element minOccurs="0" maxOccurs="1" name="DataTypeDisplayResourceKey" type="s:string"></s:element>
+					<s:element minOccurs="0" maxOccurs="1" name="Data"></s:element>
+				</s:sequence>
+			</s:extension>
+		</s:complexContent>
+	</s:complexType>
+	<s:complexType name="NWContextKey">
+		<s:sequence>
+			<s:element minOccurs="1" maxOccurs="1" name="DataType" type="tns:SPFieldType"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="Category" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:simpleType name="SPFieldType">
+		<s:restriction base="s:string">
+			<s:enumeration value="Invalid"></s:enumeration>
+			<s:enumeration value="Integer"></s:enumeration>
+			<s:enumeration value="Text"></s:enumeration>
+			<s:enumeration value="Note"></s:enumeration>
+			<s:enumeration value="DateTime"></s:enumeration>
+			<s:enumeration value="Counter"></s:enumeration>
+			<s:enumeration value="Choice"></s:enumeration>
+			<s:enumeration value="Lookup"></s:enumeration>
+			<s:enumeration value="Boolean"></s:enumeration>
+			<s:enumeration value="Number"></s:enumeration>
+			<s:enumeration value="Currency"></s:enumeration>
+			<s:enumeration value="URL"></s:enumeration>
+			<s:enumeration value="Computed"></s:enumeration>
+			<s:enumeration value="Threading"></s:enumeration>
+			<s:enumeration value="Guid"></s:enumeration>
+			<s:enumeration value="MultiChoice"></s:enumeration>
+			<s:enumeration value="GridChoice"></s:enumeration>
+			<s:enumeration value="Calculated"></s:enumeration>
+			<s:enumeration value="File"></s:enumeration>
+			<s:enumeration value="Attachments"></s:enumeration>
+			<s:enumeration value="User"></s:enumeration>
+			<s:enumeration value="Recurrence"></s:enumeration>
+			<s:enumeration value="CrossProjectLink"></s:enumeration>
+			<s:enumeration value="ModStat"></s:enumeration>
+			<s:enumeration value="Error"></s:enumeration>
+			<s:enumeration value="ContentTypeId"></s:enumeration>
+			<s:enumeration value="PageSeparator"></s:enumeration>
+			<s:enumeration value="ThreadIndex"></s:enumeration>
+			<s:enumeration value="WorkflowStatus"></s:enumeration>
+			<s:enumeration value="AllDayEvent"></s:enumeration>
+			<s:enumeration value="WorkflowEventType"></s:enumeration>
+			<s:enumeration value="MaxItems"></s:enumeration>
+		</s:restriction>
+	</s:simpleType>
+	<s:simpleType name="ContextDataOptions">
+		<s:list>
+			<s:simpleType>
+				<s:restriction base="s:string">
+					<s:enumeration value="None"></s:enumeration>
+					<s:enumeration value="DatesInIso8601Format"></s:enumeration>
+					<s:enumeration value="BooleanInCamlFormat"></s:enumeration>
+					<s:enumeration value="BooleanInXmlFormat"></s:enumeration>
+					<s:enumeration value="HtmlEncodeStrings"></s:enumeration>
+					<s:enumeration value="SqlFriendly"></s:enumeration>
+					<s:enumeration value="UnformattedNumbers"></s:enumeration>
+					<s:enumeration value="RetainCollections"></s:enumeration>
+					<s:enumeration value="RetainInfoPathPersonXml"></s:enumeration>
+					<s:enumeration value="PeopleAsSPId"></s:enumeration>
+				</s:restriction>
+			</s:simpleType>
+		</s:list>
+	</s:simpleType>
+	<s:complexType name="ArrayOfHumanTaskLogInfo">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="unbounded" name="HumanTaskLogInfo" nillable="true" type="tns:HumanTaskLogInfo"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:complexType name="HumanTaskLogInfo">
+		<s:sequence>
+			<s:element minOccurs="1" maxOccurs="1" name="EntryTime" type="s:dateTime"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="EntryTimeShort" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="EntryTimeLong" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="EntryDateShort" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="EntryDateLong" type="s:string"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="EndTime" type="s:dateTime"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="EndTimeShort" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="EndTimeLong" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="EndDateShort" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="EndDateLong" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="ActivityTitle" type="s:string"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="SequenceId" type="s:int"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="UserStart" type="s:dateTime"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="UserStartTimeShort" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="UserStartTimeLong" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="UserStartDateShort" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="UserStartDateLong" type="s:string"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="UserEnd" type="s:dateTime"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="UserEndTimeShort" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="UserEndTimeLong" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="UserEndDateShort" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="UserEndDateLong" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="UserComments" type="s:string"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="Outcome" type="tns:Outcome"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="CustomOutcome" type="s:string"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="UserActionTime" type="s:dateTime"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="UserActionTimeShort" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="UserActionTimeLong" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="UserActionDateShort" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="UserActionDateLong" type="s:string"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:element name="GetWorkflowHistoryForListItem">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="itemId" type="s:int"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="stateFilter" type="tns:SPWorkflowState"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowNameFilter" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetWorkflowHistoryForListItemResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetWorkflowHistoryForListItemResult" type="tns:ArrayOfWorkflowLog"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="QueryForMessages">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="workflowInstanceId" type="s1:guid"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="messageId" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:complexType name="MessageBoxItem">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="1" name="MessageID" type="s:string"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="WorkflowInstanceID" type="s1:guid"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="Data" type="tns:ArrayOfStartDataItem"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:complexType name="ArrayOfStartDataItem">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="unbounded" name="StartDataItem" nillable="true" type="tns:StartDataItem"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:complexType name="StartDataItem">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="1" name="Value" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:complexType name="ArrayOfMessageBoxItem">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="unbounded" name="MessageBoxItem" nillable="true" type="tns:MessageBoxItem"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:element name="QueryForMessagesResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="QueryForMessagesResult" type="tns:ArrayOfMessageBoxItem"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="PublishFromNWFXml">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowFile" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowName" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="saveIfCannotPublish" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="PublishFromNWFXmlResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="PublishFromNWFXmlResult" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="PublishFromNWFXmlSkipValidation">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowFile" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowName" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="saveIfCannotPublish" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="PublishFromNWFXmlSkipValidationResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="PublishFromNWFXmlSkipValidationResult" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="PublishFromNWFXmlNoOverwrite">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowFile" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowName" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="saveIfCannotPublish" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="PublishFromNWFXmlNoOverwriteResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="PublishFromNWFXmlNoOverwriteResult" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="PublishFromNWFXmlSkipValidationNoOverwrite">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowFile" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowName" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="saveIfCannotPublish" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="PublishFromNWFXmlSkipValidationNoOverwriteResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="PublishFromNWFXmlSkipValidationNoOverwriteResult" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="PublishFromNWF">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowFile" type="s:base64Binary"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowName" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="saveIfCannotPublish" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="PublishFromNWFResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="PublishFromNWFResult" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="PublishFromNWFNoOverwrite">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowFile" type="s:base64Binary"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowName" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="saveIfCannotPublish" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="PublishFromNWFNoOverwriteResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="PublishFromNWFNoOverwriteResult" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="PublishFromNWFSkipValidation">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowFile" type="s:base64Binary"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowName" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="saveIfCannotPublish" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="PublishFromNWFSkipValidationResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="PublishFromNWFSkipValidationResult" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="PublishFromNWFSkipValidationNoOverwrite">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowFile" type="s:base64Binary"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowName" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="saveIfCannotPublish" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="PublishFromNWFSkipValidationNoOverwriteResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="PublishFromNWFSkipValidationNoOverwriteResult" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="SaveFromNWFXml">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowFile" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="SaveFromNWFXmlResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="SaveFromNWFXmlResult" type="tns:WorkflowMetaData"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="SaveFromNWFXmlNoOverwrite">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowFile" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="SaveFromNWFXmlNoOverwriteResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="SaveFromNWFXmlNoOverwriteResult" type="tns:WorkflowMetaData"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="SaveFromNWF">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowFile" type="s:base64Binary"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="SaveFromNWFResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="SaveFromNWFResult" type="tns:WorkflowMetaData"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="SaveFromNWFNoOverwrite">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowFile" type="s:base64Binary"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="SaveFromNWFNoOverwriteResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="SaveFromNWFNoOverwriteResult" type="tns:WorkflowMetaData"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="AddWorkflowScheduleOnListItem">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="itemId" type="s:int"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="startDataXml" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="schedule" type="tns:Schedule"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="updateIfExists" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:complexType name="Schedule">
+		<s:sequence>
+			<s:element minOccurs="1" maxOccurs="1" name="MaximumRepeats" type="s:int"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="WorkdaysOnly" type="s:boolean"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="RepeatInterval" type="tns:RepeatInterval"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="EndOn" type="tns:EndScheduleOn"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="StartTime" type="s:dateTime"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="EndTime" type="s:dateTime"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:complexType name="RepeatInterval">
+		<s:sequence>
+			<s:element minOccurs="1" maxOccurs="1" name="Type" type="tns:RepeatIntervalType"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="CountBetweenIntervals" type="s:int"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:simpleType name="RepeatIntervalType">
+		<s:restriction base="s:string">
+			<s:enumeration value="Daily"></s:enumeration>
+			<s:enumeration value="Monthly"></s:enumeration>
+			<s:enumeration value="Hourly"></s:enumeration>
+		</s:restriction>
+	</s:simpleType>
+	<s:simpleType name="EndScheduleOn">
+		<s:restriction base="s:string">
+			<s:enumeration value="RepeatCount"></s:enumeration>
+			<s:enumeration value="EndDate"></s:enumeration>
+			<s:enumeration value="NoLimit"></s:enumeration>
+		</s:restriction>
+	</s:simpleType>
+	<s:element name="AddWorkflowScheduleOnListItemResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="AddWorkflowScheduleOnListItemResult" type="s:int"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="AddWorkflowSchedule">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="fileUrl" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="startDataXml" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="schedule" type="tns:Schedule"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="updateIfExists" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="AddWorkflowScheduleResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="AddWorkflowScheduleResult" type="s:int"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="RemoveWorkflowScheduleOnListItem">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="itemId" type="s:int"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="RemoveWorkflowScheduleOnListItemResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="RemoveWorkflowScheduleOnListItemResult" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="RemoveWorkflowSchedule">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="fileUrl" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="RemoveWorkflowScheduleResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="RemoveWorkflowScheduleResult" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="DelegateAllTasks">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="currentUser" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="newUser" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="sendNotification" type="s:boolean"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="comments" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="global" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:complexType name="ArrayOfString">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:element name="DelegateAllTasksResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="DelegateAllTasksResult" type="tns:ArrayOfString"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="AddLongTermDelegationRule">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="fromTheBeginningOf" type="s:dateTime"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="untilTheEndOf" type="s:dateTime"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="delegateFrom" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="delegateTo" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="currentSiteOnly" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="AddLongTermDelegationRuleResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="AddLongTermDelegationRuleResult" type="s:int"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="DeleteLongTermDelegationRule">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="id" type="s:int"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="DeleteLongTermDelegationRuleResponse">
+		<s:complexType></s:complexType>
+	</s:element>
+	<s:element name="FixWorkflowsInSiteFromTemplate">
+		<s:complexType></s:complexType>
+	</s:element>
+	<s:element name="FixWorkflowsInSiteFromTemplateResponse">
+		<s:complexType></s:complexType>
+	</s:element>
+	<s:element name="ExportWorkflow">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowType" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="ExportWorkflowResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="ExportWorkflowResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetTaskStubsForCurrentUser">
+		<s:complexType></s:complexType>
+	</s:element>
+	<s:complexType name="TaskStub">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="1" name="TaskToken" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="WorkflowName" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="ActivityTitle" type="s:string"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="EntryTime" type="s:dateTime"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:complexType name="ArrayOfTaskStub">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="unbounded" name="TaskStub" nillable="true" type="tns:TaskStub"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:element name="GetTaskStubsForCurrentUserResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetTaskStubsForCurrentUserResult" type="tns:ArrayOfTaskStub"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetTaskDetailsUsingStub">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="taskToken" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:complexType name="WorkflowTaskDetail">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="1" name="AvailableCustomOutcome" type="tns:ArrayOfConfiguredOutcome"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="ItemProperties" type="tns:ArrayOfField"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:complexType name="ArrayOfField">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="unbounded" name="Field" nillable="true" type="tns:Field"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:complexType name="Field">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="Value" type="s:string"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:element name="GetTaskDetailsUsingStubResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetTaskDetailsUsingStubResult" type="tns:WorkflowTaskDetail"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="ProcessTaskResponseUsingToken">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="comments" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="outcome" type="tns:Outcome"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="taskToken" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="customOutcome" type="s:int"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="ProcessTaskResponseUsingTokenResponse">
+		<s:complexType></s:complexType>
+	</s:element>
+	<s:element name="GetFolders">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listGuid" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:complexType name="Folder">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="Url" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:complexType name="ArrayOfFolder">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="unbounded" name="Folder" nillable="true" type="tns:Folder"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:element name="GetFoldersResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetFoldersResult" type="tns:ArrayOfFolder"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetListContentTypes">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listGuid" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:complexType name="ContentType">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:complexType name="ArrayOfContentType">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="unbounded" name="ContentType" nillable="true" type="tns:ContentType"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:element name="GetListContentTypesResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetListContentTypesResult" type="tns:ArrayOfContentType"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+</s:schema>

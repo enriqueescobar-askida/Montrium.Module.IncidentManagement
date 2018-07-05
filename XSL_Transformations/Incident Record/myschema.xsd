@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema targetNamespace="http://schemas.microsoft.com/office/infopath/2003/myXSD/2009-08-12T02:30:13" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:dfs="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution" xmlns:s0="http://microsoft.com/webservices/SharePointPortalServer/UserProfileService" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ns1="http://schemas.xmlsoap.org/wsdl/" xmlns:pc="http://schemas.microsoft.com/office/infopath/2007/PartnerControls" xmlns:ma="http://schemas.microsoft.com/office/2009/metadata/properties/metaAttributes" xmlns:d="http://schemas.microsoft.com/office/infopath/2009/WSSList/dataFields" xmlns:q="http://schemas.microsoft.com/office/infopath/2009/WSSList/queryFields" xmlns:dms="http://schemas.microsoft.com/office/2009/documentManagement/types" xmlns:udc="http://schemas.microsoft.com/office/infopath/2006/udc" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:ns2="http://schemas.microsoft.com/sharepoint/soap/" xmlns:ns3="http://nintex.com" xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2009-08-12T02:30:13" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:import namespace="http://schemas.microsoft.com/office/infopath/2007/PartnerControls" schemaLocation="BuiltInActiveXControls.xsd"/>
+	<xsd:attribute name="IncidentOrigin" type="my:requiredString"/>
+	<xsd:attribute name="IncidentOriginatingDepartment" type="my:requiredString"/>
+	<xsd:attribute name="IncidentReportedBy" type="xsd:string"/>
+	<xsd:attribute name="ProductReferenceID" type="xsd:string"/>
+	<xsd:attribute name="IncidentReviewedBy" type="xsd:string"/>
+	<xsd:element name="IncidentForm">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:IncidentID" minOccurs="0"/>
+				<xsd:element ref="my:IncidentStatus" minOccurs="0"/>
+				<xsd:element ref="my:SectionA" minOccurs="0"/>
+				<xsd:element ref="my:SectionB" minOccurs="0"/>
+				<xsd:element ref="my:SectionC" minOccurs="0"/>
+				<xsd:element ref="my:Admin" minOccurs="0"/>
+				<xsd:element ref="my:Navigator" minOccurs="0"/>
+				<xsd:element ref="my:Constants" minOccurs="0"/>
+				<xsd:element ref="my:SectionD" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:anyAttribute processContents="lax" namespace="http://www.w3.org/XML/1998/namespace"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="IncidentID" type="xsd:string"/>
+	<xsd:element name="IncidentStatus" type="xsd:string"/>
+	<xsd:element name="SectionA">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:IncidentDescription" minOccurs="0"/>
+				<xsd:element ref="my:IncidentType" minOccurs="0"/>
+				<xsd:element ref="my:IncidentInitiationDate" minOccurs="0"/>
+				<xsd:element ref="my:IncidentUrgency" minOccurs="0"/>
+				<xsd:element ref="my:DateofOccurrence" minOccurs="0"/>
+				<xsd:element ref="my:AffectedDepts" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="my:IssueReference" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="my:CustomerInfo" minOccurs="0"/>
+				<xsd:element ref="my:SupplierInfo" minOccurs="0"/>
+				<xsd:element ref="my:DesignatedReviewer" minOccurs="0"/>
+				<xsd:element ref="my:Attachments" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="my:ActionsTakenYN" minOccurs="0"/>
+				<xsd:element ref="my:ActionsTakenGroup" minOccurs="0"/>
+				<xsd:element ref="my:ReferenceTypeCount" minOccurs="0"/>
+				<xsd:element ref="my:IncidentClosureDate" minOccurs="0"/>
+				<xsd:element ref="my:ReviewButton" minOccurs="0"/>
+				<xsd:element ref="my:ItemLotNoGroup" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:attribute ref="my:IncidentOrigin"/>
+			<xsd:attribute ref="my:IncidentOriginatingDepartment"/>
+			<xsd:attribute ref="my:IncidentReportedBy"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="IncidentDescription">
+		<xsd:complexType mixed="true">
+			<xsd:sequence>
+				<xsd:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/1999/xhtml" processContents="lax"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="IncidentType" type="my:requiredString"/>
+	<xsd:element name="IncidentInitiationDate" nillable="true" type="xsd:dateTime"/>
+	<xsd:element name="IncidentUrgency" type="my:requiredString"/>
+	<xsd:element name="DateofOccurrence" type="xsd:date"/>
+	<xsd:element name="AffectedDepts">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:AffectedDepartments" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="AffectedDepartments" type="xsd:string"/>
+	<xsd:element name="IssueReference">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:ReferenceType" minOccurs="0"/>
+				<xsd:element ref="my:ReferenceID" minOccurs="0"/>
+				<xsd:element ref="my:ReferenceDescription" minOccurs="0"/>
+				<xsd:element ref="my:ProductDescription" minOccurs="0"/>
+				<xsd:element ref="my:SOPReferenceID" minOccurs="0"/>
+				<xsd:element ref="my:SOPReferenceDescription" minOccurs="0"/>
+				<xsd:element ref="my:AuditReferenceID" minOccurs="0"/>
+				<xsd:element ref="my:AuditReferenceDescription" minOccurs="0"/>
+				<xsd:element ref="my:ValidationReferenceID" minOccurs="0"/>
+				<xsd:element ref="my:OtherReferenceID" minOccurs="0"/>
+				<xsd:element ref="my:OtherReferenceDescription" minOccurs="0"/>
+				<xsd:element ref="my:ValidationReferenceDescription" minOccurs="0"/>
+				<xsd:element ref="my:TestScriptReference" minOccurs="0"/>
+				<xsd:element ref="my:group2" minOccurs="0"/>
+				<xsd:element ref="my:AuditObservationID" minOccurs="0"/>
+				<xsd:element ref="my:AuditObservationDescribption" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:attribute ref="my:ProductReferenceID"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="ReferenceType" type="xsd:string"/>
+	<xsd:element name="ReferenceID" type="xsd:string"/>
+	<xsd:element name="ReferenceDescription">
+		<xsd:complexType mixed="true">
+			<xsd:sequence>
+				<xsd:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/1999/xhtml" processContents="lax"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="ProductDescription" type="xsd:string"/>
+	<xsd:element name="SOPReferenceID" type="xsd:string"/>
+	<xsd:element name="SOPReferenceDescription" type="xsd:string"/>
+	<xsd:element name="AuditReferenceID" type="xsd:string"/>
+	<xsd:element name="AuditReferenceDescription" type="xsd:string"/>
+	<xsd:element name="ValidationReferenceID" type="xsd:string"/>
+	<xsd:element name="OtherReferenceID" type="xsd:string"/>
+	<xsd:element name="OtherReferenceDescription" type="xsd:string"/>
+	<xsd:element name="ValidationReferenceDescription" type="xsd:string"/>
+	<xsd:element name="TestScriptReference">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:TestStepNo" minOccurs="0"/>
+				<xsd:element ref="my:TestRunNo" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="TestStepNo" type="xsd:string"/>
+	<xsd:element name="TestRunNo" type="xsd:string"/>
+	<xsd:element name="group2">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:field1" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="field1" type="xsd:string"/>
+	<xsd:element name="AuditObservationID" type="xsd:string"/>
+	<xsd:element name="AuditObservationDescribption" type="xsd:string"/>
+	<xsd:element name="CustomerInfo">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:CustomerID" minOccurs="0"/>
+				<xsd:element ref="my:CustomerName" minOccurs="0"/>
+				<xsd:element ref="my:CustomerContactName" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="my:CustomercontactTitle" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="my:CustomerAddress" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="my:CustomerCity" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="my:CustomerStateProvince" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="my:CustomerCountry" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="my:CustomerPostalCode" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="CustomerID" type="xsd:string"/>
+	<xsd:element name="CustomerName" type="xsd:string"/>
+	<xsd:element name="CustomerContactName" type="xsd:string"/>
+	<xsd:element name="CustomercontactTitle" type="xsd:string"/>
+	<xsd:element name="CustomerAddress" type="xsd:string"/>
+	<xsd:element name="CustomerCity" type="xsd:string"/>
+	<xsd:element name="CustomerStateProvince" type="xsd:string"/>
+	<xsd:element name="CustomerCountry" type="xsd:string"/>
+	<xsd:element name="CustomerPostalCode" type="xsd:string"/>
+	<xsd:element name="SupplierInfo">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:SupplierID" minOccurs="0"/>
+				<xsd:element ref="my:SupplierName" minOccurs="0"/>
+				<xsd:element ref="my:ContactName" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="my:ContactTitle" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="my:Address" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="my:City" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="my:StateProvince" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="my:Country" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="my:PostalCode" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="SupplierID" type="xsd:string"/>
+	<xsd:element name="SupplierName" type="xsd:string"/>
+	<xsd:element name="ContactName" type="xsd:string"/>
+	<xsd:element name="ContactTitle" type="xsd:string"/>
+	<xsd:element name="Address" type="xsd:string"/>
+	<xsd:element name="City" type="xsd:string"/>
+	<xsd:element name="StateProvince" type="xsd:string"/>
+	<xsd:element name="Country" type="xsd:string"/>
+	<xsd:element name="PostalCode" type="xsd:string"/>
+	<xsd:element name="DesignatedReviewer">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="pc:Person" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="Attachments">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:Attachment" minOccurs="0"/>
+				<xsd:element ref="my:AttachmentDescription" minOccurs="0"/>
+				<xsd:element ref="my:AttachmentID" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="Attachment" nillable="true" type="xsd:base64Binary"/>
+	<xsd:element name="AttachmentDescription" type="xsd:string"/>
+	<xsd:element name="AttachmentID" type="xsd:string"/>
+	<xsd:element name="ActionsTakenYN" nillable="true" type="xsd:boolean"/>
+	<xsd:element name="ActionsTakenGroup">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:ActionTakenDescription" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="ActionTakenDescription">
+		<xsd:complexType mixed="true">
+			<xsd:sequence>
+				<xsd:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/1999/xhtml" processContents="lax"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="ReferenceTypeCount" type="xsd:string"/>
+	<xsd:element name="IncidentClosureDate" nillable="true" type="xsd:dateTime"/>
+	<xsd:element name="ReviewButton" nillable="true" type="xsd:boolean"/>
+	<xsd:element name="ItemLotNoGroup">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:ItemDetails" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="ItemDetails">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:ItemLotNo" minOccurs="0"/>
+				<xsd:element ref="my:ItemQuantity" minOccurs="0"/>
+				<xsd:element ref="my:ItemUnits" minOccurs="0"/>
+				<xsd:element ref="my:ItemExpirationDate" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="ItemLotNo" type="xsd:string"/>
+	<xsd:element name="ItemQuantity" nillable="true" type="xsd:double"/>
+	<xsd:element name="ItemUnits" type="xsd:string"/>
+	<xsd:element name="ItemExpirationDate" nillable="true" type="xsd:date"/>
+	<xsd:element name="SectionB">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:QARepresentative" minOccurs="0"/>
+				<xsd:element ref="my:AssignReviewtoQAGroup" minOccurs="0"/>
+				<xsd:element ref="my:IncidentValid" minOccurs="0"/>
+				<xsd:element ref="my:InvalidJustification" minOccurs="0"/>
+				<xsd:element ref="my:AdditionalActionsPerformed" minOccurs="0"/>
+				<xsd:element ref="my:JustificationSection" minOccurs="0"/>
+				<xsd:element ref="my:AdditionalActionSection" minOccurs="0"/>
+				<xsd:element ref="my:Investigation" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="QARepresentative">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="pc:Person" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="AssignReviewtoQAGroup" nillable="true" type="xsd:boolean"/>
+	<xsd:element name="IncidentValid" type="xsd:string"/>
+	<xsd:element name="InvalidJustification">
+		<xsd:complexType>
+			<xsd:sequence/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="AdditionalActionsPerformed" nillable="true" type="xsd:boolean"/>
+	<xsd:element name="JustificationSection">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:Justification" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="Justification">
+		<xsd:complexType mixed="true">
+			<xsd:sequence>
+				<xsd:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/1999/xhtml" processContents="lax"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="AdditionalActionSection">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:AdditionalActionsTable" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="AdditionalActionsTable">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:ActionDescription" minOccurs="0"/>
+				<xsd:element ref="my:ActionCompletionDate" minOccurs="0"/>
+				<xsd:element ref="my:TrainingRequestID" minOccurs="0"/>
+				<xsd:element ref="my:DocumentChangeControlID" minOccurs="0"/>
+				<xsd:element ref="my:SystemChangeControlID" minOccurs="0"/>
+				<xsd:element ref="my:DeviationID" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="ActionDescription" type="xsd:string"/>
+	<xsd:element name="ActionCompletionDate" nillable="true" type="xsd:date"/>
+	<xsd:element name="TrainingRequestID" type="xsd:string"/>
+	<xsd:element name="DocumentChangeControlID" type="xsd:string"/>
+	<xsd:element name="SystemChangeControlID" type="xsd:string"/>
+	<xsd:element name="DeviationID" type="xsd:string"/>
+	<xsd:element name="Investigation">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:RootCauseAnalysis" minOccurs="0"/>
+				<xsd:element ref="my:IncidentReview" minOccurs="0"/>
+				<xsd:element ref="my:InvestigationActionsSection" minOccurs="0"/>
+				<xsd:element ref="my:RootCauseCategories" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="RootCauseAnalysis">
+		<xsd:complexType mixed="true">
+			<xsd:sequence>
+				<xsd:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/1999/xhtml" processContents="lax"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="IncidentReview">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:IncidentReviewedDate" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:attribute ref="my:IncidentReviewedBy"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="IncidentReviewedDate" nillable="true" type="xsd:dateTime"/>
+	<xsd:element name="InvestigationActionsSection">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:InvestigationConfirmed" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="InvestigationConfirmed" nillable="true" type="xsd:boolean"/>
+	<xsd:element name="RootCauseCategories">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:RootCauseCatogory" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="RootCauseCatogory" type="xsd:string"/>
+	<xsd:element name="SectionC">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:QAImpact_Assessment" minOccurs="0"/>
+				<xsd:element ref="my:QAApprover" minOccurs="0"/>
+				<xsd:element ref="my:QAApprovalDate" minOccurs="0"/>
+				<xsd:element ref="my:IR_Rejection" minOccurs="0"/>
+				<xsd:element ref="my:IncidentOutcome" minOccurs="0"/>
+				<xsd:element ref="my:Confirm" minOccurs="0"/>
+				<xsd:element ref="my:AdditionalActionsRequired" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="QAImpact_Assessment">
+		<xsd:complexType mixed="true">
+			<xsd:sequence>
+				<xsd:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/1999/xhtml" processContents="lax"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="QAApprover" type="xsd:string"/>
+	<xsd:element name="QAApprovalDate" nillable="true" type="xsd:dateTime"/>
+	<xsd:element name="IR_Rejection">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:Rejection_Rational" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="Rejection_Rational">
+		<xsd:complexType mixed="true">
+			<xsd:sequence>
+				<xsd:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/1999/xhtml" processContents="lax"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="IncidentOutcome" type="xsd:string"/>
+	<xsd:element name="Confirm" type="xsd:string"/>
+	<xsd:element name="AdditionalActionsRequired" nillable="true" type="xsd:boolean"/>
+	<xsd:element name="Admin">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:MOSS_ID" minOccurs="0"/>
+				<xsd:element ref="my:isNew" minOccurs="0"/>
+				<xsd:element ref="my:IncidentFormName" minOccurs="0"/>
+				<xsd:element ref="my:CurrentUser" minOccurs="0"/>
+				<xsd:element ref="my:ItemID" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="MOSS_ID" nillable="true" type="xsd:integer"/>
+	<xsd:element name="isNew" type="xsd:boolean"/>
+	<xsd:element name="IncidentFormName" type="xsd:string"/>
+	<xsd:element name="CurrentUser" type="xsd:string"/>
+	<xsd:element name="ItemID" type="xsd:string"/>
+	<xsd:element name="Navigator">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:ViewSelector" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="ViewSelector">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:CurrentView" minOccurs="0"/>
+				<xsd:element ref="my:ViewCount" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="CurrentView" type="xsd:string"/>
+	<xsd:element name="ViewCount" type="xsd:string"/>
+	<xsd:element name="Constants">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:FileExtension" minOccurs="0"/>
+				<xsd:element ref="my:IncidentLibraryName" minOccurs="0"/>
+				<xsd:element ref="my:LibraryURL" minOccurs="0"/>
+				<xsd:element ref="my:WorkflowTaskListName" minOccurs="0"/>
+				<xsd:element ref="my:DocSequenceNbr" minOccurs="0"/>
+				<xsd:element ref="my:CountID" minOccurs="0"/>
+				<xsd:element ref="my:WorkflowName" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="FileExtension" type="my:requiredString"/>
+	<xsd:element name="IncidentLibraryName" type="my:requiredString"/>
+	<xsd:element name="LibraryURL" type="my:requiredString"/>
+	<xsd:element name="WorkflowTaskListName" type="my:requiredString"/>
+	<xsd:element name="DocSequenceNbr" nillable="true" type="xsd:integer"/>
+	<xsd:element name="CountID" nillable="true" type="xsd:integer"/>
+	<xsd:element name="WorkflowName" type="my:requiredString"/>
+	<xsd:element name="SectionD">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:Cancellation" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="Cancellation">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="my:CancellationRationale" minOccurs="0"/>
+				<xsd:element ref="my:CancellationRequestor" minOccurs="0"/>
+				<xsd:element ref="my:CancellationDate" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="CancellationRationale">
+		<xsd:complexType mixed="true">
+			<xsd:sequence>
+				<xsd:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/1999/xhtml" processContents="lax"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="CancellationRequestor" type="xsd:string"/>
+	<xsd:element name="CancellationDate" nillable="true" type="xsd:dateTime"/>
+	<xsd:simpleType name="requiredString">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="requiredAnyURI">
+		<xsd:restriction base="xsd:anyURI">
+			<xsd:minLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="requiredBase64Binary">
+		<xsd:restriction base="xsd:base64Binary">
+			<xsd:minLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

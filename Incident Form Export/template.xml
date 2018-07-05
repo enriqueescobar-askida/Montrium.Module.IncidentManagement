@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?mso-infoPathSolution name="urn:schemas-microsoft-com:office:infopath:Incident-Form:-myXSD-2009-08-12T02-30-13" href="manifest.xsf" solutionVersion="1.0.0.1929" productVersion="14.0.0" PIVersion="1.0.0.0" ?>
+<?mso-application progid="InfoPath.Document" versionProgid="InfoPath.Document.3"?>
+<?mso-infoPath-file-attachment-present?>
+<my:IncidentForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:dfs="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution" xmlns:s0="http://microsoft.com/webservices/SharePointPortalServer/UserProfileService" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ns1="http://schemas.xmlsoap.org/wsdl/" xmlns:pc="http://schemas.microsoft.com/office/infopath/2007/PartnerControls" xmlns:ma="http://schemas.microsoft.com/office/2009/metadata/properties/metaAttributes" xmlns:d="http://schemas.microsoft.com/office/infopath/2009/WSSList/dataFields" xmlns:q="http://schemas.microsoft.com/office/infopath/2009/WSSList/queryFields" xmlns:dms="http://schemas.microsoft.com/office/2009/documentManagement/types" xmlns:udc="http://schemas.microsoft.com/office/infopath/2006/udc" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:ns2="http://schemas.microsoft.com/sharepoint/soap/" xmlns:ns3="http://nintex.com" xmlns:ns4="http://montrium.com/webservices/" xmlns:ns5="http://schemas.xmlsoap.org/soap/envelope/" xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2009-08-12T02:30:13" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003">
+	<my:IncidentID></my:IncidentID>
+	<my:IncidentStatus>Not Submitted</my:IncidentStatus>
+	<my:SectionA my:IncidentOrigin="" my:IncidentOriginatingDepartment="" my:IncidentReportedBy="">
+		<my:IncidentDescription></my:IncidentDescription>
+		<my:IncidentType></my:IncidentType>
+		<my:IncidentInitiationDate xsi:nil="true"></my:IncidentInitiationDate>
+		<my:IncidentUrgency></my:IncidentUrgency>
+		<my:DateofOccurrence></my:DateofOccurrence>
+		<my:AffectedDepts>
+			<my:AffectedDepartments></my:AffectedDepartments>
+		</my:AffectedDepts>
+		<my:IssueReference my:ProductReferenceID="">
+			<my:ReferenceType></my:ReferenceType>
+			<my:ReferenceID></my:ReferenceID>
+			<my:ReferenceDescription></my:ReferenceDescription>
+			<my:ProductDescription></my:ProductDescription>
+			<my:SOPReferenceID></my:SOPReferenceID>
+			<my:SOPReferenceDescription></my:SOPReferenceDescription>
+			<my:AuditReferenceID></my:AuditReferenceID>
+			<my:AuditReferenceDescription></my:AuditReferenceDescription>
+			<my:ValidationReferenceID></my:ValidationReferenceID>
+			<my:OtherReferenceID></my:OtherReferenceID>
+			<my:OtherReferenceDescription></my:OtherReferenceDescription>
+			<my:ValidationReferenceDescription></my:ValidationReferenceDescription>
+			<my:TestScriptReference>
+				<my:TestStepNo></my:TestStepNo>
+				<my:TestRunNo></my:TestRunNo>
+			</my:TestScriptReference>
+			<my:group2>
+				<my:field1></my:field1>
+			</my:group2>
+			<my:AuditObservationID></my:AuditObservationID>
+			<my:AuditObservationDescribption></my:AuditObservationDescribption>
+		</my:IssueReference>
+		<my:CustomerInfo>
+			<my:CustomerID></my:CustomerID>
+			<my:CustomerName></my:CustomerName>
+			<my:CustomerContactName></my:CustomerContactName>
+			<my:CustomercontactTitle></my:CustomercontactTitle>
+			<my:CustomerAddress></my:CustomerAddress>
+			<my:CustomerCity></my:CustomerCity>
+			<my:CustomerStateProvince></my:CustomerStateProvince>
+			<my:CustomerCountry></my:CustomerCountry>
+			<my:CustomerPostalCode></my:CustomerPostalCode>
+		</my:CustomerInfo>
+		<my:SupplierInfo>
+			<my:SupplierID></my:SupplierID>
+			<my:SupplierName></my:SupplierName>
+			<my:ContactName></my:ContactName>
+			<my:ContactTitle></my:ContactTitle>
+			<my:Address></my:Address>
+			<my:City></my:City>
+			<my:StateProvince></my:StateProvince>
+			<my:Country></my:Country>
+			<my:PostalCode></my:PostalCode>
+		</my:SupplierInfo>
+		<my:DesignatedReviewer>
+			<pc:Person>
+				<pc:DisplayName></pc:DisplayName>
+				<pc:AccountId></pc:AccountId>
+				<pc:AccountType></pc:AccountType>
+			</pc:Person>
+		</my:DesignatedReviewer>
+		<my:Attachments>
+			<my:Attachment xsi:nil="true"></my:Attachment>
+			<my:AttachmentDescription></my:AttachmentDescription>
+			<my:AttachmentID></my:AttachmentID>
+		</my:Attachments>
+		<my:ActionsTakenYN>false</my:ActionsTakenYN>
+		<my:ActionsTakenGroup>
+			<my:ActionTakenDescription>N/A</my:ActionTakenDescription>
+		</my:ActionsTakenGroup>
+		<my:ReferenceTypeCount>0</my:ReferenceTypeCount>
+		<my:IncidentClosureDate xsi:nil="true"></my:IncidentClosureDate>
+		<my:ReviewButton>false</my:ReviewButton>
+		<my:ItemLotNoGroup>
+			<my:ItemDetails>
+				<my:ItemLotNo></my:ItemLotNo>
+				<my:ItemQuantity xsi:nil="true"></my:ItemQuantity>
+				<my:ItemUnits></my:ItemUnits>
+				<my:ItemExpirationDate xsi:nil="true"></my:ItemExpirationDate>
+			</my:ItemDetails>
+		</my:ItemLotNoGroup>
+	</my:SectionA>
+	<my:SectionB>
+		<my:QARepresentative>
+			<pc:Person>
+				<pc:DisplayName></pc:DisplayName>
+				<pc:AccountId></pc:AccountId>
+				<pc:AccountType></pc:AccountType>
+			</pc:Person>
+		</my:QARepresentative>
+		<my:AssignReviewtoQAGroup>false</my:AssignReviewtoQAGroup>
+		<my:IncidentValid></my:IncidentValid>
+		<my:InvalidJustification></my:InvalidJustification>
+		<my:AdditionalActionsPerformed xsi:nil="true"></my:AdditionalActionsPerformed>
+		<my:JustificationSection>
+			<my:Justification></my:Justification>
+		</my:JustificationSection>
+		<my:AdditionalActionSection>
+			<my:AdditionalActionsTable>
+				<my:ActionDescription></my:ActionDescription>
+				<my:ActionCompletionDate xsi:nil="true"></my:ActionCompletionDate>
+				<my:TrainingRequestID></my:TrainingRequestID>
+				<my:DocumentChangeControlID></my:DocumentChangeControlID>
+				<my:SystemChangeControlID></my:SystemChangeControlID>
+				<my:DeviationID></my:DeviationID>
+			</my:AdditionalActionsTable>
+		</my:AdditionalActionSection>
+		<my:Investigation>
+			<my:RootCauseAnalysis></my:RootCauseAnalysis>
+			<my:IncidentReview my:IncidentReviewedBy="">
+				<my:IncidentReviewedDate xsi:nil="true"></my:IncidentReviewedDate>
+			</my:IncidentReview>
+			<my:InvestigationActionsSection>
+				<my:InvestigationConfirmed>false</my:InvestigationConfirmed>
+			</my:InvestigationActionsSection>
+			<my:RootCauseCategories>
+				<my:RootCauseCatogory></my:RootCauseCatogory>
+			</my:RootCauseCategories>
+		</my:Investigation>
+	</my:SectionB>
+	<my:SectionC>
+		<my:QAImpact_Assessment></my:QAImpact_Assessment>
+		<my:QAApprover></my:QAApprover>
+		<my:QAApprovalDate xsi:nil="true"></my:QAApprovalDate>
+		<my:IR_Rejection>
+			<my:Rejection_Rational></my:Rejection_Rational>
+		</my:IR_Rejection>
+		<my:IncidentOutcome></my:IncidentOutcome>
+		<my:Confirm>0</my:Confirm>
+		<my:AdditionalActionsRequired>false</my:AdditionalActionsRequired>
+	</my:SectionC>
+	<my:Admin>
+		<my:MOSS_ID>1</my:MOSS_ID>
+		<my:isNew>true</my:isNew>
+		<my:IncidentFormName></my:IncidentFormName>
+		<my:CurrentUser></my:CurrentUser>
+		<my:ItemID></my:ItemID>
+		<my:IsNewForm>true</my:IsNewForm>
+		<my:FormCount>0</my:FormCount>
+		<my:FormSequence>1</my:FormSequence>
+		<my:FormNumber></my:FormNumber>
+	</my:Admin>
+	<my:Navigator>
+		<my:ViewSelector>
+			<my:CurrentView></my:CurrentView>
+			<my:ViewCount></my:ViewCount>
+		</my:ViewSelector>
+	</my:Navigator>
+	<my:Constants>
+		<my:FileExtension>.xml</my:FileExtension>
+		<my:IncidentLibraryName>Incident Forms</my:IncidentLibraryName>
+		<my:LibraryURL>http://dev2010b/sites/RnD/qmw/Incident Forms/</my:LibraryURL>
+		<my:WorkflowTaskListName>Workflow Tasks</my:WorkflowTaskListName>
+		<my:DocSequenceNbr xsi:nil="true"></my:DocSequenceNbr>
+		<my:CountID xsi:nil="true"></my:CountID>
+		<my:WorkflowName>Incident Management Process</my:WorkflowName>
+		<my:SiteURL>http://dev2010b/sites/RnD/qmw</my:SiteURL>
+		<my:LibraryName>Incident Forms</my:LibraryName>
+		<my:TaskListName>Workflow Tasks</my:TaskListName>
+		<my:FormPrefix>IMM-</my:FormPrefix>
+		<my:FormTemplateName>Generic From Template</my:FormTemplateName>
+	</my:Constants>
+	<my:SectionD>
+		<my:Cancellation>
+			<my:CancellationRationale></my:CancellationRationale>
+			<my:CancellationRequestor></my:CancellationRequestor>
+			<my:CancellationDate xsi:nil="true"></my:CancellationDate>
+		</my:Cancellation>
+	</my:SectionD>
+</my:IncidentForm>

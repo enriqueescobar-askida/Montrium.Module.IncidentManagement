@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://schemas.microsoft.com/office/infopath/2003/myXSD/2010-05-14T15:09:14" elementFormDefault="qualified" xmlns="http://schemas.microsoft.com/office/infopath/2003/myXSD/2010-05-14T15:09:14" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xml="http://www.w3.org/XML/1998/namespace">
+	<xs:import namespace="http://www.w3.org/XML/1998/namespace"/>
+	<xs:import namespace="http://www.w3.org/1999/xhtml" schemaLocation="DCR_Record-Schema1.xsd"/>
+	<xs:element name="DAL">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Constants" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:attribute name="recordsLibName" form="qualified" use="required" type="xs:string"/>
+						<xs:attribute name="effectiveLibName" form="qualified" use="required" type="xs:string"/>
+						<xs:attribute name="controlledLibName" form="qualified" use="required" type="xs:string"/>
+						<xs:attribute name="codesListName" form="qualified" use="required" type="xs:string"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="DALAdmin" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="currentDocumentActivity" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="currentDocumentActivityCode" maxOccurs="unbounded" type="xs:byte"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="DALID" maxOccurs="unbounded" type="xs:string"/>
+				<xs:element name="DocumentInformation" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="DocumentNumber" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="DocumentTitle" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="DocumentType" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="DocumentStatus" maxOccurs="unbounded">
+								<xs:complexType/>
+							</xs:element>
+							<xs:element name="Department" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="proposedRevisionLevel" maxOccurs="unbounded" type="xs:byte"/>
+							<xs:element name="currentRevision" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="currentRevisionVar" maxOccurs="unbounded">
+								<xs:complexType/>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="DCR" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="DCRNumber" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="DCRNumberVars" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="numSuffix" maxOccurs="unbounded" type="xs:byte"/>
+										<xs:element name="lastDCRNumberYear" maxOccurs="unbounded" type="xs:short"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="DCRStatus" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="targetApprovalDate" maxOccurs="unbounded" type="xs:date"/>
+							<xs:element name="departmentsAffected" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="departmentsAffectedVar" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="DepartmentManager" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Person" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="DisplayName" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="AccountId" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="AccountType" maxOccurs="unbounded" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="ChangesRequired" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="DCRType" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="parentChangeRationale" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="formChangeRequired" maxOccurs="unbounded" type="xs:boolean"/>
+										<xs:element name="FormChanges" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="formTitle" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="formNumber" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="currentFormRevision" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="currentFormRevisionVar" maxOccurs="unbounded">
+														<xs:complexType/>
+													</xs:element>
+													<xs:element name="proposedFormRevision" maxOccurs="unbounded" type="xs:byte"/>
+													<xs:element name="formRequestType" maxOccurs="unbounded" type="xs:string"/>
+													<xs:element name="formSummary" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element ref="xhtml:html" maxOccurs="unbounded"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="DCROrigin" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="DCRRequestDate" maxOccurs="unbounded" type="xs:date"/>
+										<xs:element name="DCROriginator" maxOccurs="unbounded" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="DCRInitiation" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="DCRInitiationDate" maxOccurs="unbounded" type="xs:date"/>
+										<xs:element name="DCRInitiatedBy" maxOccurs="unbounded" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="DCRReview" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="reviewType" maxOccurs="unbounded">
+											<xs:complexType/>
+										</xs:element>
+										<xs:element name="sameAs" maxOccurs="unbounded" type="xs:boolean"/>
+										<xs:element name="Reviewers" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Person" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="DisplayName" maxOccurs="unbounded" type="xs:string"/>
+																<xs:element name="AccountId" maxOccurs="unbounded" type="xs:string"/>
+																<xs:element name="AccountType" maxOccurs="unbounded" type="xs:string"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="Approvers" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Person" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="DisplayName" maxOccurs="unbounded" type="xs:string"/>
+																<xs:element name="AccountId" maxOccurs="unbounded" type="xs:string"/>
+																<xs:element name="AccountType" maxOccurs="unbounded" type="xs:string"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="DCRApproval" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="DCRApprovedDate" maxOccurs="unbounded" type="xs:date"/>
+										<xs:element name="DCRApprovedBy" maxOccurs="unbounded" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="DCRTraining" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="trainingType" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="trainingCompleted" maxOccurs="unbounded" type="xs:boolean"/>
+										<xs:element name="trainingCompletedDate" maxOccurs="unbounded" nillable="true">
+											<xs:complexType/>
+										</xs:element>
+										<xs:element name="Trainer" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Person" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="DisplayName" maxOccurs="unbounded" type="xs:string"/>
+																<xs:element name="AccountId" maxOccurs="unbounded" type="xs:string"/>
+																<xs:element name="AccountType" maxOccurs="unbounded" type="xs:string"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="DCRClosure" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="DCRClosureDate" maxOccurs="unbounded" nillable="true">
+											<xs:complexType/>
+										</xs:element>
+										<xs:element name="DCRClosedBy" maxOccurs="unbounded">
+											<xs:complexType/>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="DCRRejection" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="DCRRejectedDate" maxOccurs="unbounded" nillable="true">
+											<xs:complexType/>
+										</xs:element>
+										<xs:element name="DCRRejectedBy" maxOccurs="unbounded">
+											<xs:complexType/>
+										</xs:element>
+										<xs:element name="DCRRejectionRationale" maxOccurs="unbounded">
+											<xs:complexType/>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="DCRTermination" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="DCRTerminationDate" maxOccurs="unbounded" nillable="true">
+											<xs:complexType/>
+										</xs:element>
+										<xs:element name="DCRTerminatedBy" maxOccurs="unbounded">
+											<xs:complexType/>
+										</xs:element>
+										<xs:element name="DCRTerminationRationale" maxOccurs="unbounded">
+											<xs:complexType/>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="DCRAdmin" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="internalStatus" maxOccurs="unbounded" type="xs:byte"/>
+										<xs:element name="sectionLocked" maxOccurs="unbounded" type="xs:boolean"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="documentReviewers" maxOccurs="unbounded" type="xs:string"/>
+							<xs:element name="documentApprovers" maxOccurs="unbounded" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute ref="xml:lang" use="required"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

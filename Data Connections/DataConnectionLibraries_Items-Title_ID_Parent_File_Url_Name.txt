@@ -1,0 +1,315 @@
+﻿Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW_GetCheckoutInformation.udcx
+Data Connection Library/MTM-QMW_GetCheckoutInformation.udcx
+http://dev2010b/sites/RnD/
+MTM-QMW_GetCheckoutInformation
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW_GetListItems.udcx
+Data Connection Library/MTM-QMW_GetListItems.udcx
+http://dev2010b/sites/RnD/
+QMW-GetListItems
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW_LST_Customer List.udcx
+Data Connection Library/MTM-QMW_LST_Customer List.udcx
+http://dev2010b/sites/RnD/
+MTM-QMW_LST_Customer List
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW_LST_Department List.udcx
+Data Connection Library/MTM-QMW_LST_Department List.udcx
+http://dev2010b/sites/RnD/
+MTM-QMW_LST_Department List
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW_LST_Supplier List.udcx
+Data Connection Library/MTM-QMW_LST_Supplier List.udcx
+http://dev2010b/sites/RnD/
+MTM-QMW_LST_Supplier List
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW_NWF_GetRunningWorkflowTasksForCurrentUserForListItem.udcx
+Data Connection Library/MTM-QMW_NWF_GetRunningWorkflowTasksForCurrentUserForListItem.udcx
+http://dev2010b/sites/RnD/
+MTM-QMW_NWF_GetRunningWorkflowTasksForCurrentUserForListItem
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW_NWF_ProcessTaskResponse3.udcx
+Data Connection Library/MTM-QMW_NWF_ProcessTaskResponse3.udcx
+http://dev2010b/sites/RnD/
+MTM-QMW_NWF_ProcessTaskResponse3
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW_NWF_TerminateWorkflowByNameForListItem.udcx
+Data Connection Library/MTM-QMW_NWF_TerminateWorkflowByNameForListItem.udcx
+http://dev2010b/sites/RnD/
+MTM-QMW_NWF_TerminateWorkflowByNameForListItem
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW_RUB_EnsureUserProfile.udcx
+Data Connection Library/MTM-QMW_RUB_EnsureUserProfile.udcx
+http://dev2010b/sites/RnD/
+MTM-QMW_RUB_EnsureUserProfile
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW_RUB_GetListItems.udcx
+Data Connection Library/MTM-QMW_RUB_GetListItems.udcx
+http://dev2010b/sites/RnD/
+MTM-QMW_RUB_GetListItems
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW_SPS_CheckIn_File.udcx
+Data Connection Library/MTM-QMW_SPS_CheckIn_File.udcx
+http://dev2010b/sites/RnD/
+MTM-QMW_SPS_CheckIn_File
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW_SPS_CheckOutFile.udcx
+Data Connection Library/MTM-QMW_SPS_CheckOutFile.udcx
+http://dev2010b/sites/RnD/
+MTM-QMW_SPS_CheckOutFile
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW_SPS_GetUserProfileByName.udcx
+Data Connection Library/MTM-QMW_SPS_GetUserProfileByName.udcx
+http://dev2010b/sites/RnD/
+MTM_QMW_SPS_GetUserProfileByName
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW_SPS_UndoCheckOut.udcx
+Data Connection Library/MTM-QMW_SPS_UndoCheckOut.udcx
+http://dev2010b/sites/RnD/
+MTM-QMW_SPS_UndoCheckOut
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW-IMM_LIB_Incident Forms.udcx
+Data Connection Library/MTM-QMW-IMM_LIB_Incident Forms.udcx
+http://dev2010b/sites/RnD/
+MTM-QMW-IMM_LIB_Incident Forms
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW-IMM_LIB_Incident Forms-Submit.udcx
+Data Connection Library/MTM-QMW-IMM_LIB_Incident Forms-Submit.udcx
+http://dev2010b/sites/RnD/
+MTM-QMW-IMM_LIB_Incident Forms-Submit
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW-IMM_LIB_Incident Investigation Reports.udcx
+Data Connection Library/MTM-QMW-IMM_LIB_Incident Investigation Reports.udcx
+http://dev2010b/sites/RnD/
+MTM-QMW-IMM_LIB_Incident Investigation Reports
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW-IMM_LIB_SOP Library.udcx
+Data Connection Library/MTM-QMW-IMM_LIB_SOP Library.udcx
+http://dev2010b/sites/RnD/
+MTM-QMW_LIB_SOP Library
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW_GetCheckoutInfo-IMM_LIB_Incident Forms.udcx
+Data Connection Library/MTM-QMW_GetCheckoutInfo-IMM_LIB_Incident Forms.udcx
+http://dev2010b/sites/RnD/
+MTM-QMW_GetCheckoutInfo-IMM_LIB_Incident Forms
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW_GetListItems_LST_Customer List.udcx
+Data Connection Library/MTM-QMW_GetListItems_LST_Customer List.udcx
+http://dev2010b/sites/RnD/
+MTM-QMW_GetListItems_LST_Customer List
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW_GetListItems_LST_Department List.udcx
+Data Connection Library/MTM-QMW_GetListItems_LST_Department List.udcx
+http://dev2010b/sites/RnD/
+MTM-QMW_GetListItems_LST_Department List
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW_GetListItems_LST_Product List.udcx
+Data Connection Library/MTM-QMW_GetListItems_LST_Product List.udcx
+http://dev2010b/sites/RnD/
+MTM-QMW_GetListItems_LST_Product List
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW_GetListItems_LST_Supplier List.udcx
+Data Connection Library/MTM-QMW_GetListItems_LST_Supplier List.udcx
+http://dev2010b/sites/RnD/
+MTM-QMW_GetListItems_LST_Supplier List
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW_GetListItems-IMM_LIB_Incident Form Attachments.udcx
+Data Connection Library/MTM-QMW_GetListItems-IMM_LIB_Incident Form Attachments.udcx
+http://dev2010b/sites/RnD/
+MTM-QMW_GetListItems-IMM_LIB_Incident Form Attachments
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW_GetListItems-IMM_LIB_Incident Forms.udcx
+Data Connection Library/MTM-QMW_GetListItems-IMM_LIB_Incident Forms.udcx
+http://dev2010b/sites/RnD/
+MTM-QMW_GetListItems-IMM_LIB_Incident Forms
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW_GetListItems-IMM_LIB_Incident Investigation Reports.udcx
+Data Connection Library/MTM-QMW_GetListItems-IMM_LIB_Incident Investigation Reports.udcx
+http://dev2010b/sites/RnD/
+MTM-QMW_GetListItems-IMM_LIB_Incident Investigation Reports
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW_GetListItems-IMM_LIB_Incident Management Records.udcx
+Data Connection Library/MTM-QMW_GetListItems-IMM_LIB_Incident Management Records.udcx
+http://dev2010b/sites/RnD/
+MTM-QMW_GetListItems-IMM_LIB_Incident Management Records
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW_GetListItems-IMM_LIB_SOP Library.udcx
+Data Connection Library/MTM-QMW_GetListItems-IMM_LIB_SOP Library.udcx
+http://dev2010b/sites/RnD/
+MTM-QMW_GetListItems-IMM_LIB_SOP Library
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW_GetListItems-IMM_LIB_XSL Transformations.udcx
+Data Connection Library/MTM-QMW_GetListItems-IMM_LIB_XSL Transformations.udcx
+http://dev2010b/sites/RnD/
+MTM-QMW_GetListItems-IMM_LIB_XSL Transformations
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW_LST_Product List.udcx
+Data Connection Library/MTM-QMW_LST_Product List.udcx
+http://dev2010b/sites/RnD/
+MTM-QMW_LST_Product List
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW-IMM_LIB_Incident Forms-Set.udcx
+Data Connection Library/MTM-QMW-IMM_LIB_Incident Forms-Set.udcx
+http://dev2010b/sites/RnD/
+MTM-QMW-IMM_LIB_Incident Forms-Set
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW_LST_Customer List-Get.udcx
+Data Connection Library/MTM-QMW_LST_Customer List-Get.udcx
+http://dev2010b/sites/RnD/
+MTM-QMW_LST_Customer List-Get
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW_LST_Department List-Get.udcx
+Data Connection Library/MTM-QMW_LST_Department List-Get.udcx
+http://dev2010b/sites/RnD/
+MTM-QMW_LST_Department List-Get
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW_LST_Departments-Get.udcx
+Data Connection Library/MTM-QMW_LST_Departments-Get.udcx
+http://dev2010b/sites/RnD/
+MTM-QMW_LST_Departments-Get
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW_LST_Product List-Get.udcx
+Data Connection Library/MTM-QMW_LST_Product List-Get.udcx
+http://dev2010b/sites/RnD/
+MTM-QMW_LST_Product List-Get
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW_LST_Supplier List-Get.udcx
+Data Connection Library/MTM-QMW_LST_Supplier List-Get.udcx
+http://dev2010b/sites/RnD/
+MTM-QMW_LST_Supplier List-Get
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW-IMM_LIB_XSL Transformations-Get.udcx
+Data Connection Library/MTM-QMW-IMM_LIB_XSL Transformations-Get.udcx
+http://dev2010b/sites/RnD/
+MTM-QMW-IMM_LIB_XSL Transformations-Get
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW-IMM_LIB_SOP Library-GetListItems.udcx
+Data Connection Library/MTM-QMW-IMM_LIB_SOP Library-GetListItems.udcx
+http://dev2010b/sites/RnD/
+MTM-QMW-IMM_LIB_SOP Library-GetListItems
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW-IMM_LIB_SOP Library-Set.udcx
+Data Connection Library/MTM-QMW-IMM_LIB_SOP Library-Set.udcx
+http://dev2010b/sites/RnD/
+MTM-QMW-IMM_LIB_SOP Library-Set
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW-IMM_LIB_Incident Investigation Reports-Set.udcx
+Data Connection Library/MTM-QMW-IMM_LIB_Incident Investigation Reports-Set.udcx
+http://dev2010b/sites/RnD/
+MTM-QMW-IMM_LIB_Incident Investigation Reports-Set
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW-IMM_LIB_Incident Investigation Reports-GetListItems.udcx
+Data Connection Library/MTM-QMW-IMM_LIB_Incident Investigation Reports-GetListItems.udcx
+http://dev2010b/sites/RnD/
+MTM-QMW-IMM_LIB_Incident Investigation Reports-GetListItems
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW-IMM_LIB_Incident Investigation Reports-Get.udcx
+Data Connection Library/MTM-QMW-IMM_LIB_Incident Investigation Reports-Get.udcx
+http://dev2010b/sites/RnD/
+MTM-QMW-IMM_LIB_Incident Investigation Reports-Get
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW-IMM_LIB_Incident Forms-GetListItems.udcx
+Data Connection Library/MTM-QMW-IMM_LIB_Incident Forms-GetListItems.udcx
+http://dev2010b/sites/RnD/
+MTM-QMW-IMM_LIB_Incident Forms-GetListItems
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW-IMM_LIB_SOP Library-Get.udcx
+Data Connection Library/MTM-QMW-IMM_LIB_SOP Library-Get.udcx
+http://dev2010b/sites/RnD/
+MTM-QMW-IMM_LIB_SOP Library-Get
+Data Connection Library
+16dbdca8-45d4-43f5-9733-9cf1b236eb54
+/sites/RnD
+MTM-QMW-IMM_LIB_Incident Forms-Get.udcx
+Data Connection Library/MTM-QMW-IMM_LIB_Incident Forms-Get.udcx
+http://dev2010b/sites/RnD/
+MTM-QMW-IMM_LIB_Incident Forms-Get

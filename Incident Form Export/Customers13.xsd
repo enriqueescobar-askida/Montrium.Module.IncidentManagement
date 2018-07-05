@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<xsd:schema targetNamespace="http://schemas.microsoft.com/office/infopath/2009/WSSList/dataFields" elementFormDefault="unqualified" attributeFormDefault="unqualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:dms="http://schemas.microsoft.com/office/2009/documentManagement/types" xmlns:dfs="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution" xmlns:q="http://schemas.microsoft.com/office/infopath/2009/WSSList/queryFields" xmlns:d="http://schemas.microsoft.com/office/infopath/2009/WSSList/dataFields" xmlns:ma="http://schemas.microsoft.com/office/2009/metadata/properties/metaAttributes" xmlns:pc="http://schemas.microsoft.com/office/infopath/2007/PartnerControls">
+	<xsd:import namespace="http://schemas.microsoft.com/office/2009/documentManagement/types" schemaLocation="Customers12.xsd"></xsd:import>
+	<xsd:element name="SharePointListItem_RW">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="d:Title" minOccurs="0"></xsd:element>
+				<xsd:element ref="d:CustomerName" minOccurs="0"></xsd:element>
+				<xsd:element ref="d:ContactName" minOccurs="0"></xsd:element>
+				<xsd:element ref="d:ContactTitle" minOccurs="0"></xsd:element>
+				<xsd:element ref="d:Address" minOccurs="0"></xsd:element>
+				<xsd:element ref="d:City" minOccurs="0"></xsd:element>
+				<xsd:element ref="d:PostalCode" minOccurs="0"></xsd:element>
+				<xsd:element ref="d:StateOrProvince" minOccurs="0"></xsd:element>
+				<xsd:element ref="d:Country" minOccurs="0"></xsd:element>
+				<xsd:element ref="d:ID" minOccurs="0"></xsd:element>
+				<xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"></xsd:any>
+			</xsd:sequence>
+			<xsd:anyAttribute namespace="##other" processContents="lax"></xsd:anyAttribute>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="Title" ma:displayName="CustomerNo" ma:readOnly="false" ma:allowDeletion="true">
+		<xsd:simpleType>
+			<xsd:restriction base="dms:TextType">
+				<xsd:maxLength value="255"></xsd:maxLength>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="CustomerName" ma:displayName="CustomerName" ma:readOnly="false" ma:allowDeletion="true">
+		<xsd:simpleType>
+			<xsd:restriction base="dms:TextType">
+				<xsd:maxLength value="255"></xsd:maxLength>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="ContactName" ma:displayName="ContactName" ma:readOnly="false" ma:allowDeletion="true">
+		<xsd:simpleType>
+			<xsd:restriction base="dms:TextType">
+				<xsd:maxLength value="255"></xsd:maxLength>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="ContactTitle" ma:displayName="ContactTitle" ma:readOnly="false" ma:allowDeletion="true">
+		<xsd:simpleType>
+			<xsd:restriction base="dms:TextType">
+				<xsd:maxLength value="255"></xsd:maxLength>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="Address" ma:displayName="Address" ma:readOnly="false" ma:allowDeletion="true">
+		<xsd:simpleType>
+			<xsd:restriction base="dms:TextType">
+				<xsd:maxLength value="255"></xsd:maxLength>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="City" ma:displayName="City" ma:readOnly="false" ma:allowDeletion="true">
+		<xsd:simpleType>
+			<xsd:restriction base="dms:TextType">
+				<xsd:maxLength value="255"></xsd:maxLength>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="PostalCode" ma:displayName="PostalCode" ma:readOnly="false" ma:allowDeletion="true">
+		<xsd:simpleType>
+			<xsd:restriction base="dms:TextType">
+				<xsd:maxLength value="255"></xsd:maxLength>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="StateOrProvince" ma:displayName="StateOrProvince" ma:readOnly="false" ma:allowDeletion="true">
+		<xsd:simpleType>
+			<xsd:restriction base="dms:TextType">
+				<xsd:maxLength value="255"></xsd:maxLength>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="Country" ma:displayName="Country" ma:readOnly="false" ma:allowDeletion="true">
+		<xsd:simpleType>
+			<xsd:restriction base="dms:TextType">
+				<xsd:maxLength value="255"></xsd:maxLength>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="ID" type="dms:CounterType" ma:displayName="ID" ma:readOnly="True" nillable="true" ma:allowDeletion="true"></xsd:element>
+</xsd:schema>

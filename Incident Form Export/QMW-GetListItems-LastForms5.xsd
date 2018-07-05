@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2009-08-12T02:30:13" xmlns:dfs="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution" xmlns:ns4="http://montrium.com/webservices/" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<xsd:element name="Items">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="ItemCount" minOccurs="0" maxOccurs="1"></xsd:element>
+				<xsd:element ref="Item" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="ItemCount" type="xsd:string"></xsd:element>
+	<xsd:element name="IncidentID" type="xsd:string"></xsd:element>
+	<xsd:element name="ID" type="xsd:string"></xsd:element>
+	<xsd:element name="Item">
+		<xsd:complexType>
+			<xsd:all>
+				<xsd:element ref="IncidentID" minOccurs="0" maxOccurs="1"></xsd:element>
+				<xsd:element ref="ID" minOccurs="0" maxOccurs="1"></xsd:element>
+			</xsd:all>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

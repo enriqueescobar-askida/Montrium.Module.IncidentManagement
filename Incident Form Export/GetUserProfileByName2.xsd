@@ -1,0 +1,769 @@
+<?xml version="1.0"?>
+<s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/webservices/SharePointPortalServer/UserProfileService" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://microsoft.com/webservices/SharePointPortalServer/UserProfileService" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/">
+	<s:import namespace="http://microsoft.com/wsdl/types/" schemaLocation="GetUserProfileByName1.xsd"></s:import>
+	<s:element name="GetUserProfileByIndex">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="index" type="s:int"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetUserProfileByIndexResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetUserProfileByIndexResult" type="tns:GetUserProfileByIndexResult"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:complexType name="GetUserProfileByIndexResult">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="1" name="NextValue" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="UserProfile" type="tns:ArrayOfPropertyData"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="Colleagues" type="tns:ArrayOfContactData"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="QuickLinks" type="tns:ArrayOfQuickLinkData"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="PinnedLinks" type="tns:ArrayOfPinnedLinkData"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="Memberships" type="tns:ArrayOfMembershipData"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:complexType name="ArrayOfPropertyData">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="unbounded" name="PropertyData" nillable="true" type="tns:PropertyData"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:complexType name="PropertyData">
+		<s:sequence>
+			<s:element minOccurs="1" maxOccurs="1" name="IsPrivacyChanged" type="s:boolean"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="IsValueChanged" type="s:boolean"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="Privacy" type="tns:Privacy"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="Values" type="tns:ArrayOfValueData"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:simpleType name="Privacy">
+		<s:restriction base="s:string">
+			<s:enumeration value="Public"></s:enumeration>
+			<s:enumeration value="Contacts"></s:enumeration>
+			<s:enumeration value="Organization"></s:enumeration>
+			<s:enumeration value="Manager"></s:enumeration>
+			<s:enumeration value="Private"></s:enumeration>
+			<s:enumeration value="NotSet"></s:enumeration>
+		</s:restriction>
+	</s:simpleType>
+	<s:complexType name="ArrayOfValueData">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="unbounded" name="ValueData" nillable="true" type="tns:ValueData"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:complexType name="ValueData">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="1" name="Value"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:complexType name="ArrayOfContactData">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="unbounded" name="ContactData" nillable="true" type="tns:ContactData"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:complexType name="ContactData">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="1" name="AccountName" type="s:string"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="Privacy" type="tns:Privacy"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="IsInWorkGroup" type="s:boolean"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="Group" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="Url" type="s:string"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="UserProfileID" type="s1:guid"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:complexType name="ArrayOfQuickLinkData">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="unbounded" name="QuickLinkData" nillable="true" type="tns:QuickLinkData"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:complexType name="QuickLinkData">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="Group" type="s:string"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="Privacy" type="tns:Privacy"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="Url" type="s:string"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:complexType name="ArrayOfPinnedLinkData">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="unbounded" name="PinnedLinkData" nillable="true" type="tns:PinnedLinkData"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:complexType name="PinnedLinkData">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="Url" type="s:string"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:complexType name="ArrayOfMembershipData">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="unbounded" name="MembershipData" nillable="true" type="tns:MembershipData"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:complexType name="MembershipData">
+		<s:sequence>
+			<s:element minOccurs="1" maxOccurs="1" name="Source" type="tns:MembershipSource"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="MemberGroup" type="tns:MemberGroupData"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="Group" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="Privacy" type="tns:Privacy"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="MailNickname" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="Url" type="s:string"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="MemberGroupID" type="s:long"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:simpleType name="MembershipSource">
+		<s:restriction base="s:string">
+			<s:enumeration value="DistributionList"></s:enumeration>
+			<s:enumeration value="SharePointSite"></s:enumeration>
+			<s:enumeration value="Other"></s:enumeration>
+		</s:restriction>
+	</s:simpleType>
+	<s:complexType name="MemberGroupData">
+		<s:sequence>
+			<s:element minOccurs="1" maxOccurs="1" name="SourceInternal" type="s1:guid"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="SourceReference" type="s:string"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:complexType name="SPTimeZone">
+		<s:sequence>
+			<s:element minOccurs="1" maxOccurs="1" name="ID" type="s:unsignedShort"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:element name="CreateUserProfileByAccountName">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="accountName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="CreateUserProfileByAccountNameResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="CreateUserProfileByAccountNameResult" type="tns:ArrayOfPropertyData"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetUserProfileByName">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="AccountName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetUserProfileByNameResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetUserProfileByNameResult" type="tns:ArrayOfPropertyData"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetUserProfileByGuid">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="guid" type="s1:guid"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetUserProfileByGuidResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetUserProfileByGuidResult" type="tns:ArrayOfPropertyData"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetUserProfileSchema">
+		<s:complexType></s:complexType>
+	</s:element>
+	<s:complexType name="PropertyInfo">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="DisplayOrder" type="s:int"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="MaximumShown" type="s:int"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="IsAdminEditable" type="s:boolean"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="IsSearchable" type="s:boolean"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="IsSystem" type="s:boolean"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="ManagedPropertyName" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="AllowPolicyOverride" type="s:boolean"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="DefaultPrivacy" type="tns:Privacy"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="IsAlias" type="s:boolean"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="IsColleagueEventLog" type="s:boolean"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="IsRequired" type="s:boolean"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="IsUserEditable" type="s:boolean"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="IsVisibleOnEditor" type="s:boolean"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="IsVisibleOnViewer" type="s:boolean"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="IsReplicable" type="s:boolean"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="UserOverridePrivacy" type="s:boolean"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="Length" type="s:int"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="IsImported" type="s:boolean"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="IsMultiValue" type="s:boolean"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="ChoiceType" type="tns:ChoiceTypes"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="TermSetId" nillable="true" type="s1:guid"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:simpleType name="ChoiceTypes">
+		<s:restriction base="s:string">
+			<s:enumeration value="Off"></s:enumeration>
+			<s:enumeration value="None"></s:enumeration>
+			<s:enumeration value="Open"></s:enumeration>
+			<s:enumeration value="Closed"></s:enumeration>
+		</s:restriction>
+	</s:simpleType>
+	<s:complexType name="ArrayOfPropertyInfo">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="unbounded" name="PropertyInfo" nillable="true" type="tns:PropertyInfo"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:element name="GetUserProfileSchemaResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetUserProfileSchemaResult" type="tns:ArrayOfPropertyInfo"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetProfileSchemaNameByAccountName">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="accountName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetProfileSchemaNameByAccountNameResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetProfileSchemaNameByAccountNameResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetPropertyChoiceList">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="propertyName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:complexType name="ArrayOfString">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:element name="GetPropertyChoiceListResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetPropertyChoiceListResult" type="tns:ArrayOfString"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="ModifyUserPropertyByAccountName">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="accountName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="newData" type="tns:ArrayOfPropertyData"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="ModifyUserPropertyByAccountNameResponse">
+		<s:complexType></s:complexType>
+	</s:element>
+	<s:element name="GetUserPropertyByAccountName">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="accountName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="propertyName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetUserPropertyByAccountNameResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetUserPropertyByAccountNameResult" type="tns:PropertyData"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="CreateMemberGroup">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="membershipInfo" type="tns:MembershipData"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="CreateMemberGroupResponse">
+		<s:complexType></s:complexType>
+	</s:element>
+	<s:element name="AddMembership">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="accountName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="membershipInfo" type="tns:MembershipData"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="group" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="privacy" type="tns:Privacy"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="AddMembershipResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="AddMembershipResult" type="tns:MembershipData"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="RemoveMembership">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="accountName" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="sourceInternal" type="s1:guid"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="sourceReference" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="RemoveMembershipResponse">
+		<s:complexType></s:complexType>
+	</s:element>
+	<s:element name="UpdateMembershipPrivacy">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="accountName" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="sourceInternal" type="s1:guid"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="sourceReference" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="newPrivacy" type="tns:Privacy"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="UpdateMembershipPrivacyResponse">
+		<s:complexType></s:complexType>
+	</s:element>
+	<s:element name="GetUserMemberships">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="accountName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetUserMembershipsResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetUserMembershipsResult" type="tns:ArrayOfMembershipData"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetUserOrganizations">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="accountName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:complexType name="OrganizationProfileData">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="RecordID" type="s:long"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:complexType name="ArrayOfOrganizationProfileData">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="unbounded" name="OrganizationProfileData" nillable="true" type="tns:OrganizationProfileData"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:element name="GetUserOrganizationsResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetUserOrganizationsResult" type="tns:ArrayOfOrganizationProfileData"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetUserColleagues">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="accountName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetUserColleaguesResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetUserColleaguesResult" type="tns:ArrayOfContactData"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetUserLinks">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="accountName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetUserLinksResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetUserLinksResult" type="tns:ArrayOfQuickLinkData"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetUserPinnedLinks">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="accountName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetUserPinnedLinksResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetUserPinnedLinksResult" type="tns:ArrayOfPinnedLinkData"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetInCommon">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="accountName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:complexType name="InCommonData">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="1" name="Manager" type="tns:ContactData"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="Colleagues" type="tns:ArrayOfContactData"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="Memberships" type="tns:ArrayOfMembershipData"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:element name="GetInCommonResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetInCommonResult" type="tns:InCommonData"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetCommonManager">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="accountName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetCommonManagerResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetCommonManagerResult" type="tns:ContactData"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetCommonColleagues">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="accountName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetCommonColleaguesResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetCommonColleaguesResult" type="tns:ArrayOfContactData"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetCommonMemberships">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="accountName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetCommonMembershipsResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetCommonMembershipsResult" type="tns:ArrayOfMembershipData"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="AddColleague">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="accountName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="colleagueAccountName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="group" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="privacy" type="tns:Privacy"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="isInWorkGroup" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="AddColleagueResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="AddColleagueResult" type="tns:ContactData"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="AddColleagueWithoutEmailNotification">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="accountName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="colleagueAccountName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="group" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="privacy" type="tns:Privacy"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="isInWorkGroup" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="AddColleagueWithoutEmailNotificationResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="AddColleagueWithoutEmailNotificationResult" type="tns:ContactData"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="RemoveColleague">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="accountName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="colleagueAccountName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="RemoveColleagueResponse">
+		<s:complexType></s:complexType>
+	</s:element>
+	<s:element name="UpdateColleaguePrivacy">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="accountName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="colleagueAccountName" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="newPrivacy" type="tns:Privacy"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="UpdateColleaguePrivacyResponse">
+		<s:complexType></s:complexType>
+	</s:element>
+	<s:element name="AddPinnedLink">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="accountName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="name" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="url" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="AddPinnedLinkResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="AddPinnedLinkResult" type="tns:PinnedLinkData"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="UpdatePinnedLink">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="accountName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="data" type="tns:PinnedLinkData"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="UpdatePinnedLinkResponse">
+		<s:complexType></s:complexType>
+	</s:element>
+	<s:element name="RemovePinnedLink">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="accountName" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="id" type="s:int"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="RemovePinnedLinkResponse">
+		<s:complexType></s:complexType>
+	</s:element>
+	<s:element name="AddLink">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="accountName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="name" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="url" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="group" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="privacy" type="tns:Privacy"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="AddLinkResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="AddLinkResult" type="tns:QuickLinkData"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="UpdateLink">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="accountName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="data" type="tns:QuickLinkData"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="UpdateLinkResponse">
+		<s:complexType></s:complexType>
+	</s:element>
+	<s:element name="RemoveLink">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="accountName" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="id" type="s:int"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="RemoveLinkResponse">
+		<s:complexType></s:complexType>
+	</s:element>
+	<s:element name="RemoveAllLinks">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="accountName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="RemoveAllLinksResponse">
+		<s:complexType></s:complexType>
+	</s:element>
+	<s:element name="RemoveAllPinnedLinks">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="accountName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="RemoveAllPinnedLinksResponse">
+		<s:complexType></s:complexType>
+	</s:element>
+	<s:element name="RemoveAllColleagues">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="accountName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="RemoveAllColleaguesResponse">
+		<s:complexType></s:complexType>
+	</s:element>
+	<s:element name="RemoveAllMemberships">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="accountName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="RemoveAllMembershipsResponse">
+		<s:complexType></s:complexType>
+	</s:element>
+	<s:element name="GetUserProfileCount">
+		<s:complexType></s:complexType>
+	</s:element>
+	<s:element name="GetUserProfileCountResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="GetUserProfileCountResult" type="s:long"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="AddSuggestions">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="type" type="tns:SuggestionType"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="suggestions" type="tns:ArrayOfString"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="weights" type="tns:ArrayOfDouble"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:simpleType name="SuggestionType">
+		<s:restriction base="s:string">
+			<s:enumeration value="Colleague"></s:enumeration>
+			<s:enumeration value="Keyword"></s:enumeration>
+		</s:restriction>
+	</s:simpleType>
+	<s:complexType name="ArrayOfDouble">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="unbounded" name="double" type="s:double"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:element name="AddSuggestionsResponse">
+		<s:complexType></s:complexType>
+	</s:element>
+	<s:element name="GetProfileSchemaNames">
+		<s:complexType></s:complexType>
+	</s:element>
+	<s:element name="GetProfileSchemaNamesResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetProfileSchemaNamesResult" type="tns:ArrayOfString"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetProfileSchema">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="schemaName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetProfileSchemaResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetProfileSchemaResult" type="tns:ArrayOfPropertyInfo"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetLeaders">
+		<s:complexType></s:complexType>
+	</s:element>
+	<s:complexType name="Leader">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="1" name="AccountName" type="s:string"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="Valid" type="s:boolean"></s:element>
+			<s:element minOccurs="0" maxOccurs="1" name="ManagerAccountName" type="s:string"></s:element>
+			<s:element minOccurs="1" maxOccurs="1" name="ReportCount" type="s:int"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:complexType name="ArrayOfLeader">
+		<s:sequence>
+			<s:element minOccurs="0" maxOccurs="unbounded" name="Leader" nillable="true" type="tns:Leader"></s:element>
+		</s:sequence>
+	</s:complexType>
+	<s:element name="GetLeadersResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetLeadersResult" type="tns:ArrayOfLeader"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="AddLeader">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="accountName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="AddLeaderResponse">
+		<s:complexType></s:complexType>
+	</s:element>
+	<s:element name="RemoveLeader">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="accountName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="RemoveLeaderResponse">
+		<s:complexType></s:complexType>
+	</s:element>
+</s:schema>

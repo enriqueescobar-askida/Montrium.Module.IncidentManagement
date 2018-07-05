@@ -1,0 +1,705 @@
+<?xml version="1.0"?>
+<s:schema elementFormDefault="qualified" targetNamespace="http://montrium.com/webservices/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://montrium.com/webservices/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+	<s:element name="AddContentTypeToList">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="contentTypeName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="visible" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="AddContentTypeToListResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="AddContentTypeToListResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="AddDocumentLink">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="linkPath" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="documentFileName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="documentPath" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="AddDocumentLinkResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="AddDocumentLinkResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="AddDocumentOverlay">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="fileUrl" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="parameters" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="overlayFileUri" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="overwrite" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="AddDocumentOverlayResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="AddDocumentOverlayResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="AddDocumentWatermark">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="fileUrl" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="parameters" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="parametersFileUrl" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="overwrite" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="AddDocumentWatermarkResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="AddDocumentWatermarkResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="AddItemPermission">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listId" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="itemId" type="s:int"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="users" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="removeExisting" nillable="true" type="s:boolean"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="permissionLevel" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="AddItemPermissionResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="AddItemPermissionResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="AddTaskPermissionAsync">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="webUrl" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowListId" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="workflowItemId" type="s:int"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="taskTitle" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="users" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="ConvertFile">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="inFileUrl" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="outFileUrl" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="xslFileUrl" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="xmlJobTemplateUri" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="contentTypeName" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="overwrite" type="s:boolean"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="useAdlib" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="ConvertFileResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="ConvertFileResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="CopyFile">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="sourceFileUrl" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="targetFileUrl" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="overwrite" type="s:boolean"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="doMove" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="CopyFileResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="CopyFileResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="CopyFileMetadata">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="fromFileUrl" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="toFileUrl" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="omitFields" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="changeVersion" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="CopyFileMetadataResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="CopyFileMetadataResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="CreateInfoPathForm">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listId" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="contentTypeName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="formPath" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="overwrite" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="CreateInfoPathFormResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="CreateInfoPathFormResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="DeleteListItem">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listId" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="itemId" type="s:int"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="asyncTimeDelay" type="s:int"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="DeleteListItemResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="DeleteListItemResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="DeletePreviousFileVersions">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="fileUrl" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="DeletePreviousFileVersionsResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="DeletePreviousFileVersionsResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="DownloadFile">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="fileUrl" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="targetFolder" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="DownloadFileResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="DownloadFileResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="EnsureUserProfile">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="userLogin" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="EnsureUserProfileResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="EnsureUserProfileResult">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetInfoPathAttachment">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listId" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="itemId" type="s:int"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="xPath" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="targetUri" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="overwrite" type="s:boolean"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="remove" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetInfoPathAttachmentResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetInfoPathAttachmentResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetItemDirectoryUrl">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listId" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="itemId" type="s:int"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetItemDirectoryUrlResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetItemDirectoryUrlResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetListAbsoluteUrl">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listId" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetListAbsoluteUrlResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetListAbsoluteUrlResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetListAttribute">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listId" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="attributeName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetListAttributeResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetListAttributeResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetListID">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetListIDResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetListIDResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetListItemAttachment">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listId" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="itemId" type="s:int"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="targetUri" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="overwrite" type="s:boolean"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="remove" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetListItemAttachmentResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetListItemAttachmentResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetListItems">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="viewFields" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="query" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetListItemsResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetListItemsResult">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetWorkflowHistoryForListItem">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="itemId" type="s:int"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowNameFilter" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetWorkflowHistoryForListItemResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetWorkflowHistoryForListItemResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetUserID">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="userLogin" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetUserIDResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="GetUserIDResult" type="s:int"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="IsUserInSPGroup">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="userLogin" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="groupName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="IsUserInSPGroupResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="IsUserInSPGroupResult" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="QueryXMLFile">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listId" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="itemId" type="s:int"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="xPath" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="QueryXMLFileResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="QueryXMLFileResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="ProcessNintexTask">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="spTaskId" type="s:int"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="userLogin" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="taskListName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="outcome" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="comments" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="ProcessNintexTaskResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="ProcessNintexTaskResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="RemoveAllItemPermissions">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listId" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="itemId" type="s:int"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="RemoveAllItemPermissionsResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="RemoveAllItemPermissionsResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="ResetItemPermissions">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listId" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="itemId" type="s:int"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="ResetItemPermissionsResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="ResetItemPermissionsResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="SendToRecordsCenter">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listId" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="itemId" type="s:int"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="recordsCenterUrl" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="action" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="SendToRecordsCenterResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="AddItemPermissionResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="SetFileFieldValue">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="fileUrl" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="fieldName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="fieldValue" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="SetFileFieldValueResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="SetFileFieldValueResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="SetFileFields">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="fileUrl" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="fieldsXvalues" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="SetFileFieldsResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="SetFileFieldsResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="SetGetListCustomProperty">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="set" type="s:boolean"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="propertyName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="propertyValue" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="SetGetListCustomPropertyResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="SetGetListCustomPropertyResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="SetItemFieldValue">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listId" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="itemId" type="s:int"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="fieldName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="fieldValue" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="SetItemFieldValueResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="SetItemFieldValueResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="SetItemFields">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listId" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="itemId" type="s:int"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="fieldsXvalues" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="SetItemFieldsResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="SetItemFieldsResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="SetItemPermissionsToRead">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listId" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="itemId" type="s:int"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="omitUsers" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="SetItemPermissionsToReadResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="SetItemPermissionsToReadResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="StartWorkflow">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="fileUrl" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="associationData" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="StartWorkflowResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="StartWorkflowResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="StartWorkflowOnListItem">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="itemId" type="s:int"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="workflowName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="associationData" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="StartWorkflowOnListItemResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="StartWorkflowOnListItemResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="SubmitInfoPathForm">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="formDataString" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="formUrl" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="overwrite" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="SubmitInfoPathFormResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="SubmitInfoPathFormResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="UpdateXMLFile">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listId" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="itemId" type="s:int"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="nodesXvalues" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="UpdateXMLFileResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="UpdateXMLFileResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="UploadFile">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="filePath" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="toUrl" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="contentTypeName" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="overwrite" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="UploadFileResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="UploadFileResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="UploadTemplateToContentType">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="templateUrl" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="contentTypeName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="UploadTemplateToContentTypeResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="UploadTemplateToContentTypeResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="WaitForCheckIn">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listId" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="itemId" type="s:int"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="maxSeconds" type="s:int"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="WaitForCheckInResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="WaitForCheckInResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="XSLTransform">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="xmlFileUrl" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="xslFileUrl" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="outFileUri" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="XSLTransformResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="XSLTransformResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+</s:schema>

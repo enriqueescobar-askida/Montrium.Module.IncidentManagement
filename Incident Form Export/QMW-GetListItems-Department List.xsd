@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<xsd:schema elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:dfs="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution" xmlns:ns4="http://montrium.com/webservices/">
+	<xsd:import namespace="http://montrium.com/webservices/" schemaLocation="QMW-GetListItems-Department List1.xsd"></xsd:import>
+	<xsd:element name="myFields">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="queryFields">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element ref="ns4:GetListItems"></xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="dataFields">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element ref="ns4:GetListItemsResponse"></xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"></xsd:any>
+			</xsd:sequence>
+			<xsd:anyAttribute namespace="##other" processContents="lax"></xsd:anyAttribute>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

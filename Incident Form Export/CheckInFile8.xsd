@@ -1,0 +1,843 @@
+<?xml version="1.0"?>
+<s:schema elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/sharepoint/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://schemas.microsoft.com/sharepoint/soap/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/">
+	<s:import namespace="http://www.w3.org/2001/XMLSchema"></s:import>
+	<s:import namespace="http://microsoft.com/wsdl/types/" schemaLocation="CheckInFile7.xsd"></s:import>
+	<s:element name="GetList">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetListResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetListResult">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetListAndView">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="viewName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetListAndViewResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetListAndViewResult">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="DeleteList">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="listName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="DeleteListResponse">
+		<s:complexType></s:complexType>
+	</s:element>
+	<s:element name="AddList">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="description" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="templateID" type="s:int"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="AddListResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="AddListResult">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="AddListFromFeature">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="description" type="s:string"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="featureID" type="s1:guid"></s:element>
+				<s:element minOccurs="1" maxOccurs="1" name="templateID" type="s:int"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="AddListFromFeatureResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="AddListFromFeatureResult">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="UpdateList">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="listProperties">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="newFields">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="updateFields">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="deleteFields">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="listVersion" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="UpdateListResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="UpdateListResult">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetListCollection">
+		<s:complexType></s:complexType>
+	</s:element>
+	<s:element name="GetListCollectionResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetListCollectionResult">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetListItems">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="viewName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="query">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="viewFields">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="rowLimit" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="queryOptions">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="webID" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetListItemsResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetListItemsResult">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetListItemChanges">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="viewFields">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="since" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="contains">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetListItemChangesResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetListItemChangesResult">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetListItemChangesWithKnowledge">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="viewName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="query">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="viewFields">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="rowLimit" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="queryOptions">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="syncScope" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="knowledge">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="contains">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetListItemChangesWithKnowledgeResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetListItemChangesWithKnowledgeResult">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetListItemChangesSinceToken">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="viewName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="query">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="viewFields">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="rowLimit" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="queryOptions">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="changeToken" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="contains">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetListItemChangesSinceTokenResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetListItemChangesSinceTokenResult">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="UpdateListItems">
+		<s:complexType>
+			<s:sequence>
+				<s:element name="listName" type="s:string"></s:element>
+				<s:element name="updates">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="UpdateListItemsResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="UpdateListItemsResult">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="UpdateListItemsWithKnowledge">
+		<s:complexType>
+			<s:sequence>
+				<s:element name="listName" type="s:string"></s:element>
+				<s:element name="updates">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="syncScope" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="knowledge">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="UpdateListItemsWithKnowledgeResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="UpdateListItemsWithKnowledgeResult">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="AddDiscussionBoardItem">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="message" type="s:base64Binary"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="AddDiscussionBoardItemResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="AddDiscussionBoardItemResult">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="AddWikiPage">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="strListName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="listRelPageUrl" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="wikiContent" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="AddWikiPageResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="AddWikiPageResult">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetVersionCollection">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="strlistID" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="strlistItemID" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="strFieldName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetVersionCollectionResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetVersionCollectionResult">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="AddAttachment">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="listItemID" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="fileName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="attachment" type="s:base64Binary"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="AddAttachmentResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="AddAttachmentResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetAttachmentCollection">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="listItemID" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetAttachmentCollectionResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetAttachmentCollectionResult">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="DeleteAttachment">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="listItemID" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="url" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="DeleteAttachmentResponse">
+		<s:complexType></s:complexType>
+	</s:element>
+	<s:element name="CheckOutFile">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="pageUrl" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="checkoutToLocal" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="lastmodified" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="CheckOutFileResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="CheckOutFileResult" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="UndoCheckOut">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="pageUrl" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="UndoCheckOutResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="UndoCheckOutResult" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="CheckInFile">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="pageUrl" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="comment" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="CheckinType" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="CheckInFileResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="1" maxOccurs="1" name="CheckInFileResult" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetListContentTypes">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="contentTypeId" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetListContentTypesResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetListContentTypesResult">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetListContentTypesAndProperties">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="contentTypeId" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="propertyPrefix" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="includeWebProperties" type="s:boolean"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetListContentTypesAndPropertiesResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetListContentTypesAndPropertiesResult">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetListContentType">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="contentTypeId" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="GetListContentTypeResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="GetListContentTypeResult">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="CreateContentType">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="displayName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="parentType" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="fields">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="contentTypeProperties">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="addToView" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="CreateContentTypeResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="CreateContentTypeResult" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="UpdateContentType">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="contentTypeId" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="contentTypeProperties">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="newFields">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="updateFields">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="deleteFields">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="addToView" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="UpdateContentTypeResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="UpdateContentTypeResult">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="DeleteContentType">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="contentTypeId" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="DeleteContentTypeResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="DeleteContentTypeResult">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="UpdateContentTypeXmlDocument">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="contentTypeId" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="newDocument">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="UpdateContentTypeXmlDocumentResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="UpdateContentTypeXmlDocumentResult">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="UpdateContentTypesXmlDocument">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="newDocument">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="UpdateContentTypesXmlDocumentResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="UpdateContentTypesXmlDocumentResult">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="DeleteContentTypeXmlDocument">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="contentTypeId" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="documentUri" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="DeleteContentTypeXmlDocumentResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="DeleteContentTypeXmlDocumentResult">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="ApplyContentTypeToList">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="webUrl" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="contentTypeId" type="s:string"></s:element>
+				<s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string"></s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="ApplyContentTypeToListResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element minOccurs="0" maxOccurs="1" name="ApplyContentTypeToListResult">
+					<s:complexType mixed="true">
+						<s:sequence>
+							<s:any></s:any>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+</s:schema>

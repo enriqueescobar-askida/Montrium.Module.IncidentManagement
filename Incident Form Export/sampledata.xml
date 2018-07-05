@@ -1,0 +1,661 @@
+<my:IncidentForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:dfs="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution" xmlns:s0="http://microsoft.com/webservices/SharePointPortalServer/UserProfileService" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ns1="http://schemas.xmlsoap.org/wsdl/" xmlns:pc="http://schemas.microsoft.com/office/infopath/2007/PartnerControls" xmlns:ma="http://schemas.microsoft.com/office/2009/metadata/properties/metaAttributes" xmlns:d="http://schemas.microsoft.com/office/infopath/2009/WSSList/dataFields" xmlns:q="http://schemas.microsoft.com/office/infopath/2009/WSSList/queryFields" xmlns:dms="http://schemas.microsoft.com/office/2009/documentManagement/types" xmlns:udc="http://schemas.microsoft.com/office/infopath/2006/udc" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:ns2="http://schemas.microsoft.com/sharepoint/soap/" xmlns:ns3="http://nintex.com" xmlns:ns4="http://montrium.com/webservices/" xmlns:ns5="http://schemas.xmlsoap.org/soap/envelope/" xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2009-08-12T02:30:13" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003">
+	<my:IncidentID/>
+	<my:IncidentStatus>Not Submitted</my:IncidentStatus>
+	<my:SectionA my:IncidentOrigin="" my:IncidentOriginatingDepartment="" my:IncidentReportedBy="">
+		<my:IncidentDescription/>
+		<my:IncidentType/>
+		<my:IncidentInitiationDate/>
+		<my:IncidentUrgency/>
+		<my:DateofOccurrence/>
+		<my:AffectedDepts>
+			<my:AffectedDepartments/>
+		</my:AffectedDepts>
+		<my:IssueReference my:ProductReferenceID="">
+			<my:ReferenceType/>
+			<my:ReferenceID/>
+			<my:ReferenceDescription/>
+			<my:ProductDescription/>
+			<my:SOPReferenceID/>
+			<my:SOPReferenceDescription/>
+			<my:AuditReferenceID/>
+			<my:AuditReferenceDescription/>
+			<my:ValidationReferenceID/>
+			<my:OtherReferenceID/>
+			<my:OtherReferenceDescription/>
+			<my:ValidationReferenceDescription/>
+			<my:TestScriptReference>
+				<my:TestStepNo/>
+				<my:TestRunNo/>
+			</my:TestScriptReference>
+			<my:group2>
+				<my:field1/>
+			</my:group2>
+			<my:AuditObservationID/>
+			<my:AuditObservationDescribption/>
+		</my:IssueReference>
+		<my:CustomerInfo>
+			<my:CustomerID/>
+			<my:CustomerName/>
+			<my:CustomerContactName/>
+			<my:CustomercontactTitle/>
+			<my:CustomerAddress/>
+			<my:CustomerCity/>
+			<my:CustomerStateProvince/>
+			<my:CustomerCountry/>
+			<my:CustomerPostalCode/>
+		</my:CustomerInfo>
+		<my:SupplierInfo>
+			<my:SupplierID/>
+			<my:SupplierName/>
+			<my:ContactName/>
+			<my:ContactTitle/>
+			<my:Address/>
+			<my:City/>
+			<my:StateProvince/>
+			<my:Country/>
+			<my:PostalCode/>
+		</my:SupplierInfo>
+		<my:DesignatedReviewer>
+			<pc:Person>
+				<pc:DisplayName/>
+				<pc:AccountId/>
+				<pc:AccountType/>
+			</pc:Person>
+		</my:DesignatedReviewer>
+		<my:Attachments>
+			<my:Attachment/>
+			<my:AttachmentDescription/>
+			<my:AttachmentID/>
+		</my:Attachments>
+		<my:ActionsTakenYN>false</my:ActionsTakenYN>
+		<my:ActionsTakenGroup>
+			<my:ActionTakenDescription/>
+		</my:ActionsTakenGroup>
+		<my:ReferenceTypeCount>0</my:ReferenceTypeCount>
+		<my:IncidentClosureDate/>
+		<my:ReviewButton>false</my:ReviewButton>
+		<my:ItemLotNoGroup>
+			<my:ItemDetails>
+				<my:ItemLotNo/>
+				<my:ItemQuantity/>
+				<my:ItemUnits/>
+				<my:ItemExpirationDate/>
+			</my:ItemDetails>
+		</my:ItemLotNoGroup>
+	</my:SectionA>
+	<my:SectionB>
+		<my:QARepresentative>
+			<pc:Person>
+				<pc:DisplayName/>
+				<pc:AccountId/>
+				<pc:AccountType/>
+			</pc:Person>
+		</my:QARepresentative>
+		<my:AssignReviewtoQAGroup>false</my:AssignReviewtoQAGroup>
+		<my:IncidentValid/>
+		<my:InvalidJustification/>
+		<my:AdditionalActionsPerformed/>
+		<my:JustificationSection>
+			<my:Justification/>
+		</my:JustificationSection>
+		<my:AdditionalActionSection>
+			<my:AdditionalActionsTable>
+				<my:ActionDescription/>
+				<my:ActionCompletionDate/>
+				<my:TrainingRequestID/>
+				<my:DocumentChangeControlID/>
+				<my:SystemChangeControlID/>
+				<my:DeviationID/>
+			</my:AdditionalActionsTable>
+		</my:AdditionalActionSection>
+		<my:Investigation>
+			<my:RootCauseAnalysis/>
+			<my:IncidentReview my:IncidentReviewedBy="">
+				<my:IncidentReviewedDate/>
+			</my:IncidentReview>
+			<my:InvestigationActionsSection>
+				<my:InvestigationConfirmed>false</my:InvestigationConfirmed>
+			</my:InvestigationActionsSection>
+			<my:RootCauseCategories>
+				<my:RootCauseCatogory/>
+			</my:RootCauseCategories>
+		</my:Investigation>
+	</my:SectionB>
+	<my:SectionC>
+		<my:QAImpact_Assessment/>
+		<my:QAApprover/>
+		<my:QAApprovalDate/>
+		<my:IR_Rejection>
+			<my:Rejection_Rational/>
+		</my:IR_Rejection>
+		<my:IncidentOutcome/>
+		<my:Confirm>0</my:Confirm>
+		<my:AdditionalActionsRequired>false</my:AdditionalActionsRequired>
+	</my:SectionC>
+	<my:Admin>
+		<my:MOSS_ID>1</my:MOSS_ID>
+		<my:isNew>true</my:isNew>
+		<my:IncidentFormName/>
+		<my:CurrentUser/>
+		<my:ItemID/>
+		<my:IsNewForm>true</my:IsNewForm>
+		<my:FormCount>0</my:FormCount>
+		<my:FormSequence>1</my:FormSequence>
+		<my:FormNumber/>
+	</my:Admin>
+	<my:Navigator>
+		<my:ViewSelector>
+			<my:CurrentView/>
+			<my:ViewCount/>
+		</my:ViewSelector>
+	</my:Navigator>
+	<my:Constants>
+		<my:FileExtension>.xml</my:FileExtension>
+		<my:IncidentLibraryName>Incident Forms</my:IncidentLibraryName>
+		<my:LibraryURL>http://dev2010b/sites/RnD/qmw/Incident Forms/</my:LibraryURL>
+		<my:WorkflowTaskListName>Workflow Tasks</my:WorkflowTaskListName>
+		<my:DocSequenceNbr/>
+		<my:CountID/>
+		<my:WorkflowName>Incident Management Process</my:WorkflowName>
+		<my:SiteURL>http://dev2010b/sites/RnD/qmw</my:SiteURL>
+		<my:LibraryName>Incident Forms</my:LibraryName>
+		<my:TaskListName>Workflow Tasks</my:TaskListName>
+		<my:FormPrefix>IMM-</my:FormPrefix>
+		<my:FormTemplateName>Generic From Template</my:FormTemplateName>
+	</my:Constants>
+	<my:SectionD>
+		<my:Cancellation>
+			<my:CancellationRationale/>
+			<my:CancellationRequestor/>
+			<my:CancellationDate/>
+		</my:Cancellation>
+	</my:SectionD>
+	<xd:SchemaInfo LocalName="IncidentForm" NamespaceURI="http://schemas.microsoft.com/office/infopath/2003/myXSD/2009-08-12T02:30:13">
+		<xd:Namespaces>
+			<xd:Namespace LocalName="IncidentForm" NamespaceURI="http://schemas.microsoft.com/office/infopath/2003/myXSD/2009-08-12T02:30:13"/>
+		</xd:Namespaces>
+	</xd:SchemaInfo>
+	<xd:DataConnection Name="QMW-GetListItems-Department List">
+		<dfs:myFields xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2009-08-12T02:30:13" xmlns:ns4="http://montrium.com/webservices/" xmlns:dfs="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003">
+			<dfs:queryFields>
+				<ns4:GetListItems>
+					<ns4:listName/>
+					<ns4:viewFields/>
+					<ns4:query/>
+				</ns4:GetListItems>
+			</dfs:queryFields>
+			<dfs:dataFields>
+				<ns4:GetListItemsResponse>
+					<ns4:GetListItemsResult>
+						<Items xd:PluggedNode="">
+							<ItemCount/>
+							<Item>
+								<ID/>
+								<Title/>
+							</Item>
+						</Items>
+					</ns4:GetListItemsResult>
+				</ns4:GetListItemsResponse>
+			</dfs:dataFields>
+			<xd:SchemaInfo LocalName="myFields" NamespaceURI="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution">
+				<xd:Namespaces>
+					<xd:Namespace LocalName="myFields" NamespaceURI="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution"/>
+					<xd:Namespace LocalName="Items" NamespaceURI=""/>
+				</xd:Namespaces>
+				<xd:RequiredAnys>
+					<xd:RequiredAny SOM_Path="{http://montrium.com/webservices/}GetListItemsResponse/{http://montrium.com/webservices/}GetListItemsResult/##any[1]" NamespaceURI="" LocalName="Items"/>
+				</xd:RequiredAnys>
+			</xd:SchemaInfo>
+		</dfs:myFields>
+	</xd:DataConnection>
+	<xd:DataConnection Name="EnsureUserProfile">
+		<dfs:myFields xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2009-08-12T02:30:13" xmlns:ns4="http://montrium.com/webservices/" xmlns:dfs="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003">
+			<dfs:queryFields>
+				<ns4:EnsureUserProfile>
+					<ns4:userLogin/>
+				</ns4:EnsureUserProfile>
+			</dfs:queryFields>
+			<dfs:dataFields>
+				<ns4:EnsureUserProfileResponse>
+					<ns4:EnsureUserProfileResult>
+						<Profile xd:PluggedNode="">
+							<Result/>
+							<PropertyData>
+								<Name/>
+								<DisplayName/>
+								<Value/>
+							</PropertyData>
+						</Profile>
+					</ns4:EnsureUserProfileResult>
+				</ns4:EnsureUserProfileResponse>
+			</dfs:dataFields>
+			<xd:SchemaInfo LocalName="myFields" NamespaceURI="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution">
+				<xd:Namespaces>
+					<xd:Namespace LocalName="myFields" NamespaceURI="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution"/>
+					<xd:Namespace LocalName="Profile" NamespaceURI=""/>
+				</xd:Namespaces>
+				<xd:RequiredAnys>
+					<xd:RequiredAny SOM_Path="{http://montrium.com/webservices/}EnsureUserProfileResponse/{http://montrium.com/webservices/}EnsureUserProfileResult/##any[1]" NamespaceURI="" LocalName="Profile"/>
+				</xd:RequiredAnys>
+			</xd:SchemaInfo>
+		</dfs:myFields>
+	</xd:DataConnection>
+	<xd:DataConnection Name="QMW-GetListItems-LastForms">
+		<dfs:myFields xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2009-08-12T02:30:13" xmlns:ns4="http://montrium.com/webservices/" xmlns:dfs="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003">
+			<dfs:queryFields>
+				<ns4:GetListItems>
+					<ns4:listName/>
+					<ns4:viewFields/>
+					<ns4:query/>
+				</ns4:GetListItems>
+			</dfs:queryFields>
+			<dfs:dataFields>
+				<ns4:GetListItemsResponse>
+					<ns4:GetListItemsResult>
+						<Items xd:PluggedNode="">
+							<ItemCount/>
+							<Item>
+								<IncidentID/>
+								<ID/>
+							</Item>
+						</Items>
+					</ns4:GetListItemsResult>
+				</ns4:GetListItemsResponse>
+			</dfs:dataFields>
+			<xd:SchemaInfo LocalName="myFields" NamespaceURI="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution">
+				<xd:Namespaces>
+					<xd:Namespace LocalName="myFields" NamespaceURI="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution"/>
+					<xd:Namespace LocalName="Items" NamespaceURI=""/>
+				</xd:Namespaces>
+				<xd:RequiredAnys>
+					<xd:RequiredAny SOM_Path="{http://montrium.com/webservices/}GetListItemsResponse/{http://montrium.com/webservices/}GetListItemsResult/##any[1]" NamespaceURI="" LocalName="Items"/>
+				</xd:RequiredAnys>
+			</xd:SchemaInfo>
+		</dfs:myFields>
+	</xd:DataConnection>
+	<xd:DataConnection Name="IncidentForms">
+		<dfs:myFields xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2009-08-12T02:30:13" xmlns:pc="http://schemas.microsoft.com/office/infopath/2007/PartnerControls" xmlns:ma="http://schemas.microsoft.com/office/2009/metadata/properties/metaAttributes" xmlns:d="http://schemas.microsoft.com/office/infopath/2009/WSSList/dataFields" xmlns:q="http://schemas.microsoft.com/office/infopath/2009/WSSList/queryFields" xmlns:dfs="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution" xmlns:dms="http://schemas.microsoft.com/office/2009/documentManagement/types" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003">
+			<dfs:queryFields>
+				<q:SharePointListItem_RW>
+					<q:Title/>
+					<q:Incident_x0020_ID/>
+					<q:ID/>
+				</q:SharePointListItem_RW>
+			</dfs:queryFields>
+			<dfs:dataFields>
+				<d:SharePointListItem_RW>
+					<d:Title/>
+					<d:Incident_x0020_ID/>
+					<d:ID/>
+				</d:SharePointListItem_RW>
+			</dfs:dataFields>
+			<xd:SchemaInfo LocalName="myFields" NamespaceURI="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution">
+				<xd:Namespaces>
+					<xd:Namespace LocalName="myFields" NamespaceURI="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution"/>
+				</xd:Namespaces>
+			</xd:SchemaInfo>
+		</dfs:myFields>
+	</xd:DataConnection>
+	<xd:DataConnection Name="SOP Library">
+		<dfs:myFields xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2009-08-12T02:30:13" xmlns:pc="http://schemas.microsoft.com/office/infopath/2007/PartnerControls" xmlns:ma="http://schemas.microsoft.com/office/2009/metadata/properties/metaAttributes" xmlns:d="http://schemas.microsoft.com/office/infopath/2009/WSSList/dataFields" xmlns:q="http://schemas.microsoft.com/office/infopath/2009/WSSList/queryFields" xmlns:dfs="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution" xmlns:dms="http://schemas.microsoft.com/office/2009/documentManagement/types" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003">
+			<dfs:queryFields>
+				<q:SharePointListItem_RW>
+					<q:SOP_x0020_ID/>
+					<q:SOP_x0020_Description/>
+					<q:ID/>
+				</q:SharePointListItem_RW>
+			</dfs:queryFields>
+			<dfs:dataFields>
+				<d:SharePointListItem_RW>
+					<d:SOP_x0020_ID/>
+					<d:SOP_x0020_Description/>
+					<d:ID/>
+				</d:SharePointListItem_RW>
+			</dfs:dataFields>
+			<xd:SchemaInfo LocalName="myFields" NamespaceURI="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution">
+				<xd:Namespaces>
+					<xd:Namespace LocalName="myFields" NamespaceURI="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution"/>
+				</xd:Namespaces>
+			</xd:SchemaInfo>
+		</dfs:myFields>
+	</xd:DataConnection>
+	<xd:DataConnection Name="TerminateWorkflowByNameForListItem">
+		<dfs:myFields xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2009-08-12T02:30:13" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:ns3="http://nintex.com" xmlns:dfs="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003">
+			<dfs:queryFields>
+				<ns3:TerminateWorkflowByNameForListItem>
+					<ns3:listName/>
+					<ns3:itemId/>
+					<ns3:workflowName/>
+					<ns3:terminatePreviousInstances>false</ns3:terminatePreviousInstances>
+				</ns3:TerminateWorkflowByNameForListItem>
+			</dfs:queryFields>
+			<dfs:dataFields>
+				<ns3:TerminateWorkflowByNameForListItemResponse/>
+			</dfs:dataFields>
+			<xd:SchemaInfo LocalName="myFields" NamespaceURI="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution">
+				<xd:Namespaces>
+					<xd:Namespace LocalName="myFields" NamespaceURI="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution"/>
+				</xd:Namespaces>
+			</xd:SchemaInfo>
+		</dfs:myFields>
+	</xd:DataConnection>
+	<xd:DataConnection Name="Suppliers">
+		<dfs:myFields xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2009-08-12T02:30:13" xmlns:pc="http://schemas.microsoft.com/office/infopath/2007/PartnerControls" xmlns:ma="http://schemas.microsoft.com/office/2009/metadata/properties/metaAttributes" xmlns:d="http://schemas.microsoft.com/office/infopath/2009/WSSList/dataFields" xmlns:q="http://schemas.microsoft.com/office/infopath/2009/WSSList/queryFields" xmlns:dfs="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution" xmlns:dms="http://schemas.microsoft.com/office/2009/documentManagement/types" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003">
+			<dfs:queryFields>
+				<q:SharePointListItem_RW>
+					<q:Title/>
+					<q:SupplierName/>
+					<q:ContactName/>
+					<q:ContactTitle/>
+					<q:Address/>
+					<q:City/>
+					<q:PostalCode/>
+					<q:StateOrProvince/>
+					<q:Country/>
+					<q:ID/>
+				</q:SharePointListItem_RW>
+			</dfs:queryFields>
+			<dfs:dataFields>
+				<d:SharePointListItem_RW>
+					<d:Title/>
+					<d:SupplierName/>
+					<d:ContactName/>
+					<d:ContactTitle/>
+					<d:Address/>
+					<d:City/>
+					<d:PostalCode/>
+					<d:StateOrProvince/>
+					<d:Country/>
+					<d:ID/>
+				</d:SharePointListItem_RW>
+			</dfs:dataFields>
+			<xd:SchemaInfo LocalName="myFields" NamespaceURI="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution">
+				<xd:Namespaces>
+					<xd:Namespace LocalName="myFields" NamespaceURI="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution"/>
+				</xd:Namespaces>
+			</xd:SchemaInfo>
+		</dfs:myFields>
+	</xd:DataConnection>
+	<xd:DataConnection Name="Customers">
+		<dfs:myFields xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2009-08-12T02:30:13" xmlns:pc="http://schemas.microsoft.com/office/infopath/2007/PartnerControls" xmlns:ma="http://schemas.microsoft.com/office/2009/metadata/properties/metaAttributes" xmlns:d="http://schemas.microsoft.com/office/infopath/2009/WSSList/dataFields" xmlns:q="http://schemas.microsoft.com/office/infopath/2009/WSSList/queryFields" xmlns:dfs="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution" xmlns:dms="http://schemas.microsoft.com/office/2009/documentManagement/types" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003">
+			<dfs:queryFields>
+				<q:SharePointListItem_RW>
+					<q:Title/>
+					<q:CustomerName/>
+					<q:ContactName/>
+					<q:ContactTitle/>
+					<q:Address/>
+					<q:City/>
+					<q:PostalCode/>
+					<q:StateOrProvince/>
+					<q:Country/>
+					<q:ID/>
+				</q:SharePointListItem_RW>
+			</dfs:queryFields>
+			<dfs:dataFields>
+				<d:SharePointListItem_RW>
+					<d:Title/>
+					<d:CustomerName/>
+					<d:ContactName/>
+					<d:ContactTitle/>
+					<d:Address/>
+					<d:City/>
+					<d:PostalCode/>
+					<d:StateOrProvince/>
+					<d:Country/>
+					<d:ID/>
+				</d:SharePointListItem_RW>
+			</dfs:dataFields>
+			<xd:SchemaInfo LocalName="myFields" NamespaceURI="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution">
+				<xd:Namespaces>
+					<xd:Namespace LocalName="myFields" NamespaceURI="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution"/>
+				</xd:Namespaces>
+			</xd:SchemaInfo>
+		</dfs:myFields>
+	</xd:DataConnection>
+	<xd:DataConnection Name="Departments">
+		<dfs:myFields xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2009-08-12T02:30:13" xmlns:pc="http://schemas.microsoft.com/office/infopath/2007/PartnerControls" xmlns:ma="http://schemas.microsoft.com/office/2009/metadata/properties/metaAttributes" xmlns:d="http://schemas.microsoft.com/office/infopath/2009/WSSList/dataFields" xmlns:q="http://schemas.microsoft.com/office/infopath/2009/WSSList/queryFields" xmlns:dfs="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution" xmlns:dms="http://schemas.microsoft.com/office/2009/documentManagement/types" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003">
+			<dfs:queryFields>
+				<q:SharePointListItem_RW>
+					<q:Title/>
+					<q:Department_x0020_Code/>
+					<q:Department_x0020_Manager/>
+					<q:ID/>
+				</q:SharePointListItem_RW>
+			</dfs:queryFields>
+			<dfs:dataFields>
+				<d:SharePointListItem_RW>
+					<d:Title/>
+					<d:Department_x0020_Code/>
+					<d:Department_x0020_Manager>
+						<pc:Person>
+							<pc:DisplayName/>
+							<pc:AccountId/>
+							<pc:AccountType/>
+						</pc:Person>
+					</d:Department_x0020_Manager>
+					<d:ID/>
+				</d:SharePointListItem_RW>
+			</dfs:dataFields>
+			<xd:SchemaInfo LocalName="myFields" NamespaceURI="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution">
+				<xd:Namespaces>
+					<xd:Namespace LocalName="myFields" NamespaceURI="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution"/>
+				</xd:Namespaces>
+			</xd:SchemaInfo>
+		</dfs:myFields>
+	</xd:DataConnection>
+	<xd:DataConnection Name="CheckInFile">
+		<dfs:myFields xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2009-08-12T02:30:13" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:ns2="http://schemas.microsoft.com/sharepoint/soap/" xmlns:dfs="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003">
+			<dfs:queryFields>
+				<ns2:CheckInFile>
+					<ns2:pageUrl/>
+					<ns2:comment/>
+					<ns2:CheckinType/>
+				</ns2:CheckInFile>
+			</dfs:queryFields>
+			<dfs:dataFields>
+				<ns2:CheckInFileResponse>
+					<ns2:CheckInFileResult>false</ns2:CheckInFileResult>
+				</ns2:CheckInFileResponse>
+			</dfs:dataFields>
+			<xd:SchemaInfo LocalName="myFields" NamespaceURI="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution">
+				<xd:Namespaces>
+					<xd:Namespace LocalName="myFields" NamespaceURI="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution"/>
+				</xd:Namespaces>
+			</xd:SchemaInfo>
+		</dfs:myFields>
+	</xd:DataConnection>
+	<xd:DataConnection Name="GetCheckoutInformation">
+		<dfs:myFields xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2009-08-12T02:30:13" xmlns:pc="http://schemas.microsoft.com/office/infopath/2007/PartnerControls" xmlns:ma="http://schemas.microsoft.com/office/2009/metadata/properties/metaAttributes" xmlns:d="http://schemas.microsoft.com/office/infopath/2009/WSSList/dataFields" xmlns:q="http://schemas.microsoft.com/office/infopath/2009/WSSList/queryFields" xmlns:dfs="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution" xmlns:dms="http://schemas.microsoft.com/office/2009/documentManagement/types" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003">
+			<dfs:queryFields>
+				<q:SharePointListItem_RW>
+					<q:Title/>
+					<q:ID/>
+					<q:Modified/>
+					<q:Editor/>
+					<q:CheckoutUser/>
+				</q:SharePointListItem_RW>
+			</dfs:queryFields>
+			<dfs:dataFields>
+				<d:SharePointListItem_RW>
+					<d:Title/>
+					<d:ID/>
+					<d:Modified/>
+					<d:Editor/>
+					<d:CheckoutUser>
+						<pc:Person>
+							<pc:DisplayName/>
+							<pc:AccountId/>
+							<pc:AccountType/>
+						</pc:Person>
+					</d:CheckoutUser>
+				</d:SharePointListItem_RW>
+			</dfs:dataFields>
+			<xd:SchemaInfo LocalName="myFields" NamespaceURI="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution">
+				<xd:Namespaces>
+					<xd:Namespace LocalName="myFields" NamespaceURI="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution"/>
+				</xd:Namespaces>
+			</xd:SchemaInfo>
+		</dfs:myFields>
+	</xd:DataConnection>
+	<xd:DataConnection Name="Incident Investigation Reports">
+		<dfs:myFields xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2009-08-12T02:30:13" xmlns:pc="http://schemas.microsoft.com/office/infopath/2007/PartnerControls" xmlns:ma="http://schemas.microsoft.com/office/2009/metadata/properties/metaAttributes" xmlns:d="http://schemas.microsoft.com/office/infopath/2009/WSSList/dataFields" xmlns:q="http://schemas.microsoft.com/office/infopath/2009/WSSList/queryFields" xmlns:dfs="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution" xmlns:dms="http://schemas.microsoft.com/office/2009/documentManagement/types" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003">
+			<dfs:queryFields>
+				<q:SharePointListItem_RW>
+					<q:Title/>
+					<q:Incident_x0020_ID/>
+					<q:_Status/>
+					<q:Document_x0020_Number/>
+					<q:ID/>
+				</q:SharePointListItem_RW>
+			</dfs:queryFields>
+			<dfs:dataFields>
+				<d:SharePointListItem_RW>
+					<d:Title/>
+					<d:Incident_x0020_ID/>
+					<d:_Status/>
+					<d:Document_x0020_Number/>
+					<d:ID/>
+				</d:SharePointListItem_RW>
+			</dfs:dataFields>
+			<xd:SchemaInfo LocalName="myFields" NamespaceURI="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution">
+				<xd:Namespaces>
+					<xd:Namespace LocalName="myFields" NamespaceURI="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution"/>
+				</xd:Namespaces>
+			</xd:SchemaInfo>
+		</dfs:myFields>
+	</xd:DataConnection>
+	<xd:DataConnection Name="CheckOutFile">
+		<dfs:myFields xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2009-08-12T02:30:13" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:ns2="http://schemas.microsoft.com/sharepoint/soap/" xmlns:dfs="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003">
+			<dfs:queryFields>
+				<ns2:CheckOutFile>
+					<ns2:pageUrl/>
+					<ns2:checkoutToLocal/>
+					<ns2:lastmodified/>
+				</ns2:CheckOutFile>
+			</dfs:queryFields>
+			<dfs:dataFields>
+				<ns2:CheckOutFileResponse>
+					<ns2:CheckOutFileResult>false</ns2:CheckOutFileResult>
+				</ns2:CheckOutFileResponse>
+			</dfs:dataFields>
+			<xd:SchemaInfo LocalName="myFields" NamespaceURI="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution">
+				<xd:Namespaces>
+					<xd:Namespace LocalName="myFields" NamespaceURI="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution"/>
+				</xd:Namespaces>
+			</xd:SchemaInfo>
+		</dfs:myFields>
+	</xd:DataConnection>
+	<xd:DataConnection Name="GetRunningWorkflowTasksForCurrentUserForListItem">
+		<dfs:myFields xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2009-08-12T02:30:13" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:ns3="http://nintex.com" xmlns:dfs="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003">
+			<dfs:queryFields>
+				<ns3:GetRunningWorkflowTasksForCurrentUserForListItem>
+					<ns3:itemId/>
+					<ns3:listName/>
+				</ns3:GetRunningWorkflowTasksForCurrentUserForListItem>
+			</dfs:queryFields>
+			<dfs:dataFields>
+				<ns3:GetRunningWorkflowTasksForCurrentUserForListItemResponse>
+					<ns3:GetRunningWorkflowTasksForCurrentUserForListItemResult>
+						<ns3:UserTask>
+							<ns3:SharePointTaskId/>
+							<ns3:HumanWorkflowID/>
+							<ns3:AssignedTo>
+								<ns3:SipAddress/>
+								<ns3:OtherEmailAddress/>
+								<ns3:UserID/>
+								<ns3:DisplayName/>
+								<ns3:IsDomainGroup>false</ns3:IsDomainGroup>
+								<ns3:IsSPGroup>false</ns3:IsSPGroup>
+								<ns3:IsUser>false</ns3:IsUser>
+							</ns3:AssignedTo>
+							<ns3:Comments/>
+							<ns3:EntryTime/>
+							<ns3:WorkflowName/>
+							<ns3:WorkflowInstaceId/>
+							<ns3:TaskName/>
+							<ns3:TaskType/>
+						</ns3:UserTask>
+					</ns3:GetRunningWorkflowTasksForCurrentUserForListItemResult>
+				</ns3:GetRunningWorkflowTasksForCurrentUserForListItemResponse>
+			</dfs:dataFields>
+			<xd:SchemaInfo LocalName="myFields" NamespaceURI="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution">
+				<xd:Namespaces>
+					<xd:Namespace LocalName="myFields" NamespaceURI="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution"/>
+				</xd:Namespaces>
+			</xd:SchemaInfo>
+		</dfs:myFields>
+	</xd:DataConnection>
+	<xd:DataConnection Name="ProcessTaskResponse3">
+		<dfs:myFields xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2009-08-12T02:30:13" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:ns3="http://nintex.com" xmlns:dfs="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003">
+			<dfs:queryFields>
+				<ns3:ProcessTaskResponse3>
+					<ns3:comments/>
+					<ns3:outcome/>
+					<ns3:spTaskId/>
+					<ns3:taskListName/>
+				</ns3:ProcessTaskResponse3>
+			</dfs:queryFields>
+			<dfs:dataFields>
+				<ns3:ProcessTaskResponse3Response>
+					<ns3:ProcessTaskResponse3Result/>
+				</ns3:ProcessTaskResponse3Response>
+			</dfs:dataFields>
+			<xd:SchemaInfo LocalName="myFields" NamespaceURI="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution">
+				<xd:Namespaces>
+					<xd:Namespace LocalName="myFields" NamespaceURI="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution"/>
+				</xd:Namespaces>
+			</xd:SchemaInfo>
+		</dfs:myFields>
+	</xd:DataConnection>
+	<xd:DataConnection Name="UndoCheckOut">
+		<dfs:myFields xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2009-08-12T02:30:13" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:ns2="http://schemas.microsoft.com/sharepoint/soap/" xmlns:dfs="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003">
+			<dfs:queryFields>
+				<ns2:UndoCheckOut>
+					<ns2:pageUrl/>
+				</ns2:UndoCheckOut>
+			</dfs:queryFields>
+			<dfs:dataFields>
+				<ns2:UndoCheckOutResponse>
+					<ns2:UndoCheckOutResult>false</ns2:UndoCheckOutResult>
+				</ns2:UndoCheckOutResponse>
+			</dfs:dataFields>
+			<xd:SchemaInfo LocalName="myFields" NamespaceURI="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution">
+				<xd:Namespaces>
+					<xd:Namespace LocalName="myFields" NamespaceURI="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution"/>
+				</xd:Namespaces>
+			</xd:SchemaInfo>
+		</dfs:myFields>
+	</xd:DataConnection>
+	<xd:DataConnection Name="GetUserProfileByName">
+		<dfs:myFields xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2009-08-12T02:30:13" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:s0="http://microsoft.com/webservices/SharePointPortalServer/UserProfileService" xmlns:dfs="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:ns1="http://schemas.xmlsoap.org/wsdl/" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003">
+			<dfs:queryFields>
+				<s0:GetUserProfileByName>
+					<s0:AccountName/>
+				</s0:GetUserProfileByName>
+			</dfs:queryFields>
+			<dfs:dataFields>
+				<s0:GetUserProfileByNameResponse>
+					<s0:GetUserProfileByNameResult>
+						<s0:PropertyData>
+							<s0:IsPrivacyChanged>false</s0:IsPrivacyChanged>
+							<s0:IsValueChanged>false</s0:IsValueChanged>
+							<s0:Name/>
+							<s0:Privacy/>
+							<s0:Values>
+								<s0:ValueData>
+									<s0:Value/>
+								</s0:ValueData>
+							</s0:Values>
+						</s0:PropertyData>
+					</s0:GetUserProfileByNameResult>
+				</s0:GetUserProfileByNameResponse>
+			</dfs:dataFields>
+			<xd:SchemaInfo LocalName="myFields" NamespaceURI="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution">
+				<xd:Namespaces>
+					<xd:Namespace LocalName="myFields" NamespaceURI="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution"/>
+				</xd:Namespaces>
+			</xd:SchemaInfo>
+		</dfs:myFields>
+	</xd:DataConnection>
+</my:IncidentForm>

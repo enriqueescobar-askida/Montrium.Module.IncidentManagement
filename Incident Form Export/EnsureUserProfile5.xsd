@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2009-08-12T02:30:13" xmlns:dfs="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution" xmlns:ns4="http://montrium.com/webservices/" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<xsd:element name="DisplayName" type="xsd:string"></xsd:element>
+	<xsd:element name="PropertyData">
+		<xsd:complexType>
+			<xsd:all>
+				<xsd:element ref="Name" minOccurs="0" maxOccurs="1"></xsd:element>
+				<xsd:element ref="DisplayName" minOccurs="0" maxOccurs="1"></xsd:element>
+				<xsd:element ref="Value" minOccurs="0" maxOccurs="1"></xsd:element>
+			</xsd:all>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="Result" type="xsd:string"></xsd:element>
+	<xsd:element name="Profile">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="Result" minOccurs="0" maxOccurs="1"></xsd:element>
+				<xsd:element ref="PropertyData" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="Value" type="xsd:string"></xsd:element>
+	<xsd:element name="Name" type="xsd:string"></xsd:element>
+</xsd:schema>
